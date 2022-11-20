@@ -1,0 +1,18 @@
+MAKE Version 3.6  Copyright (c) 1992 Borland International
+
+Available memory 15728640 bytes
+
+        c:\prog\bc31\bin\bcc.exe -c -1 -mh -DBCC -Ic:\inc -Ic:\prog\bc31\inc -Ld:\ -Lc:\prog\bc31\lib run_prg.c
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+run_prg.c:
+
+        Available memory 3588252
+RUN_PRG.OBJ
+Скопировано файлов:         1.
+Turbo Link  Version 5.1 Copyright (c) 1992 Borland International
+
+PKLITE Professional (tm)  Executable File Compressor  Version 1.12  6-15-91
+Copyright 1990-1991 PKWARE Inc.  All Rights Reserved.  Patent Pending
+
+Compressing: OZPMAK23.EXE     11%13%15%17%19%21%23%25%27%28%30%32%34%36%38%40%42%44%45%47%49%51%53%55%57%59%61%63%64%66%68%70%72%74%76%78%80%81%83%85%87%89%91%93%95%97%99%   
+Original Size: 432096  Compressed Size: 112794  Ratio: 73.9

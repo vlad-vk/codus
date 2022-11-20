@@ -1,0 +1,23 @@
+#include "lib\codlib.h"
+#include "lib\codipccs.def"
+#include "lib\codipccs.h"
+
+#include "oth\other_a.h"
+#include "reg\regul_a.h"
+
+#include "run_prgv.h"
+#include "run_prgl.h"
+#include "version.h"
+
+#include "every_c.c"
+#include "every_s.c"
+#include "every_t.c"
+#include "input_a.c"
+#include "input_d.c"
+#include "other.c"
+#include "ouput_a.c"
+#include "ouput_d.c"
+#include "signal.c"
+#include "start.c"
+#include "update_s.c"
+#include "update_t.c"

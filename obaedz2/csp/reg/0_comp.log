@@ -1,0 +1,47 @@
+MAKE Version 3.6  Copyright (c) 1992 Borland International
+
+Available memory 15350320 bytes
+
+	D:\prog\bc31\bin\bcc.exe -c -mh -1 -DBCC -ID:\prog\bc31\inc -ID:\prog\bc31\inc -Ld:\ -LD:\prog\bc31\lib -e *.c 
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+regul00.c:
+regul01.c:
+regul02.c:
+regul03.c:
+regul04.c:
+regul05.c:
+regul06c.c:
+regul06v.c:
+regul07.c:
+regul07v.c:
+regul08.c:
+regul09.c:
+regul11.c:
+regul12.c:
+regul14.c:
+regul55.c:
+reg_doz.c:
+reg_step.c:
+reg_zvms.c:
+
+	Available memory 3669344
+ REGUL00.OBJ
+ REGUL01.OBJ
+ REGUL02.OBJ
+ REGUL03.OBJ
+ REGUL04.OBJ
+ REGUL05.OBJ
+ REGUL06C.OBJ
+ REGUL06V.OBJ
+ REGUL07.OBJ
+ REGUL07V.OBJ
+ REGUL08.OBJ
+ REGUL09.OBJ
+ REGUL11.OBJ
+ REGUL12.OBJ
+ REGUL14.OBJ
+ REGUL55.OBJ
+ REG_DOZ.OBJ
+ REG_STEP.OBJ
+ REG_ZVMS.OBJ
+   19 File(s) copied.

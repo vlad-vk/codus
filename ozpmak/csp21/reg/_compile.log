@@ -1,0 +1,31 @@
+MAKE Version 3.6  Copyright (c) 1992 Borland International
+
+Available memory 15728640 bytes
+
+        c:\prog\bc31\bin\bcc.exe -c -mh -1 -DBCC -Ic:\prog\bc31\inc -Ic:\prog\bc31\inc -Ld:\ -Lc:\prog\bc31\lib -e *.c 
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+regul_00.c:
+regul_a1.c:
+regul_a2.c:
+regul_c1.c:
+Warning regul_c1.c 200: 'CCMGK' is assigned a value that is never used in function Regul_1c
+regul_c2.c:
+Warning regul_c2.c 203: 'CCMGK' is assigned a value that is never used in function Regul_2c
+regul_p1.c:
+Warning regul_p1.c 200: 'CCMGK' is assigned a value that is never used in function Regul_1p
+regul_p2.c:
+Warning regul_p2.c 200: 'CCMGK' is assigned a value that is never used in function Regul_2p
+regul_z1.c:
+regul_z2.c:
+
+        Available memory 3345748
+REGUL_00.OBJ
+REGUL_A1.OBJ
+REGUL_A2.OBJ
+REGUL_C1.OBJ
+REGUL_C2.OBJ
+REGUL_P1.OBJ
+REGUL_P2.OBJ
+REGUL_Z1.OBJ
+REGUL_Z2.OBJ
+Скопировано файлов:         9.

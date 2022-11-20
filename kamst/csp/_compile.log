@@ -1,0 +1,11 @@
+MAKE Version 3.6  Copyright (c) 1992 Borland International
+
+Available memory 265601024 bytes
+
+        c:\prog\bc31\bin\bcc.exe -mh -DBCC -Ic:\inc -Ic:\prog\bc31\inc -Ld:\ -Lc:\prog\bc31\lib -erun_prg.exe run_prg.c reg\reg.obj lib\codipccs.lib
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+run_prg.c:
+Turbo Link  Version 5.1 Copyright (c) 1992 Borland International
+
+        Available memory 3664488
+        pklite run_prg.exe
