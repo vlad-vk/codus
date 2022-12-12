@@ -1,5 +1,5 @@
 CL=$(BC)\bin\bcc.exe
-FLG=-mh -1 -DBCC -I$(BC)\inc -I$(BC)\inc -Ld:\ -L$(BC)\lib -e$(EXE)
+FLG=-mh -1 -DBCC -I$(BC)\inc -I$(BC)\inc -Ld:\ -L$(BC)\lib -LC:\codus\lib -IC:\codus\lib -e$(EXE)
 
 all: cmp
 cmp:

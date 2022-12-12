@@ -4,7 +4,7 @@ EXE=run_prog.exe
 
 CL=$(BC)\bin\bcc.exe
 
-CFLAG=-mh -1 -DBCC -I$(BC)\inc -I$(BC)\inc -Ld:\ -L$(BC)\lib -e$(EXE)
+CFLAG=-mh -1 -DBCC -I$(BC)\inc -IC:\codus\lib -L$(BC)\lib -LC:\codus\lib
 
 all: cmp
 

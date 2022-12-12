@@ -1,12 +1,12 @@
 MAKE Version 3.6  Copyright (c) 1992 Borland International
 
-Available memory 64633392 bytes
+Available memory 12668928 bytes
 
-	d:\prog\bc31\bin\bcc.exe -c -mh -1 -DBCC -Id:\prog\bc31\inc -Id:\prog\bc31\inc -Ld:\ -Ld:\prog\bc31\lib -erun_prog.exe kkbkkt.c
+        c:\prog\bc31\bin\bcc.exe -c -mh -1 -DBCC -Ic:\prog\bc31\inc -IC:\codus\lib -Lc:\prog\bc31\lib -LC:\codus\lib kkbkkt.c
 Borland C++  Version 3.1 Copyright (c) 1992 Borland International
 kkbkkt.c:
 
-	Available memory 3606196
- KKBKKT.OBJ
-   1 File(s) copied.
+        Available memory 3608772
+KKBKKT.OBJ
+Скопировано файлов:         1.
 Turbo Link  Version 5.1 Copyright (c) 1992 Borland International

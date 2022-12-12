@@ -1,9 +1,9 @@
 obj\signal.obj+
 obj\kkbkkt.obj+
-l:\lib\out\c0h.obj
+c:\codus\lib\c0h.obj
 kkbkkt
 /c/i
-l:\lib\out\codcs1.lib+
-l:\lib\out\emu.lib+
-l:\lib\out\mathh.lib+
-l:\lib\out\ch.lib
+c:\codus\lib\codcs1.lib+
+c:\codus\lib\emu.lib+
+c:\codus\lib\mathh.lib+
+c:\codus\lib\ch.lib

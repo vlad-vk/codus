@@ -1,0 +1,38 @@
+
+D: Time start programm CODUS: 29.11.2022  08:42:37 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.11.29 08:42:38 D: Defined user command file name: [kkbkkt/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1366x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+D: Close database archive & report.
+D: Stop network interfaces.
+D: Time exit from programm CODUS: 29.11.2022  08:43:17 
+

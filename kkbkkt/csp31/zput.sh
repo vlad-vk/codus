@@ -1,9 +1,11 @@
 #!/bin/bash
 
+PATH=c:/prog/cygwin;${PATH}
+
 FILE="kkbkkt"
 STAT="KKBKKT PCCSKT (${FILE})"
 VIRT="pccs@192.168.56.11"
-REAL="pccs@10.10.10.11"
+REAL="pccs@10.10.10.3"
 
 FL="-B"
 while [ 1 ]
@@ -25,7 +27,7 @@ do
     if [ "$k" = "2" ] ; then IP="$REAL"; PF="--proxy=off"; fi
     if [ "$IP" = "" ] ; then continue; fi
     export ftp_proxy=$PR
-    cmd="wput ${FL} ${PF} ${FILE}.exe ftp://${IP}"; echo $cmd; $cmd;
+    cmd="c:/prog/cygwin/wputm.exe ${FL} ${PF} ${FILE}.exe ftp://${IP}"; echo $cmd; $cmd;
 #   cmd="wput ${FL} ${PF} ${FILE}.ini ftp://${IP}"; echo $cmd; $cmd;
     echo -n "Press Enter to continue..."; read k;
 done

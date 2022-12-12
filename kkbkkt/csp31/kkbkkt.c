@@ -1,6 +1,6 @@
 //---------------------------------------------------------------------------
 #include "_libpath.inc"
-#include "l:\lib\pctcp\pctcpudp.h"
+#include <pctcpudp.h>
 
 #include "prg\run_prgv.h"
 #include "prg\version.h"

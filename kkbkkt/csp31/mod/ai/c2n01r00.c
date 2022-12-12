@@ -27,8 +27,8 @@
     AIP202___V=AISet( 1,GetMODV(COMU1,rec,1),0,32768,0,AIP202_SDV,AIP202__AV,AIP202__FV)+AIP202_SZV;
     AIP203___V=AISet( 2,GetMODV(COMU1,rec,2),0,32768,0,AIP203_SDV,AIP203__AV,AIP203__FV)+AIP203_SZV;
     AIF301___V=AISet( 3,GetMODV(COMU1,rec,3),0,32768,0,AIF301_SDV,AIF301__AV,AIF301__FV)+AIF301_SZV;
-    if(AIF301___V<0){ AIF301___V=0; }
-    AIF301___V= (_f)sqrt((double)AIF301___V);
+//  if(AIF301___V<0){ AIF301___V=0; }
+//  AIF301___V= (_f)sqrt((double)AIF301___V);
 //  MAX расход м.б 6.3 м3, sqrt(40)=6.3
 //  значит в  таблице диапазонов за шкалу прибора надо брать значение 40
 //  тогда для таблицы НОЛЬ = -40/4 = -10, а ДИАПАЗОН = 40+(40/4) = 50

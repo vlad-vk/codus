@@ -1,11 +1,13 @@
 #!/bin/bash
 CD=`pwd`
 
+cd c:/codus/TCL
+
 FILE="KKBKKT"
 STAT="KKBKKT PCCS31 (${FILE})"
 VIRT="192.168.56.11"
-REAL="10.10.10.5"
-PORT="84D"
+REAL="10.10.10.3"
+PORT="123"
 
 while [ 1 ]
 do
@@ -25,6 +27,6 @@ do
     if [ "$k" = "1" ] ; then IP="$VIRT"; PR="6363"; fi
     if [ "$k" = "2" ] ; then IP="$REAL"; PR="$PORT";fi
     if [ "$IP" = "" ] ; then continue; fi
-    tinycl ${PR} ${IP}
+    start TinyClient.cmd ${IP} ${PR}
 done
 exit
