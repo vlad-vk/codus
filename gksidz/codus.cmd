@@ -10,76 +10,79 @@
 
 #-----------------------------------------------------------------------------
 #  Definition of variables
-   %РУЧ = 0                                 ;
-   %АВТ = 1                                 ;
-   %ВЫК = 0                                 ;
-   %ВКЛ = 1                                 ;
-   %КРАСНЫЙ = 0                             ;
-   %СИНИЙ   = 1                             ;
-   %ГОЛУБОЙ = 1                             ;
-   %ЗЕЛЕНЫЙ = 2                             ;
-   %ЖЕЛТЫЙ  = 3                             ;
-   %СТРОК_В_ТЕКУЩЕМ_ФАЙЛЕ = l0069           ;
-   %СТРОК_В_ТФЛ_ДЛЯ_КОДУС = y0069           ;
-   %СЕКУНДА_НОВАЯ = x0101                   ;
-   %СЕКУНДА_ЗАПИС = x0100                   ;
-   %СЕКУНДА_КОДУС = l0041                   ;
-   %ДЗ_СУХОГО  = x0081                      ;
-   %ДЗ_МОКРОГО = x0082                      ;
-   %ДЗ_АПАСТЫ  = x0083                      ;
+   %MAN = 0                                 ;
+   %AUT = 1                                 ;
+   %OFF = 0                                 ;
+   %ON_ = 1                                 ;
+   
+   %RED    = 0                              ;
+   %BLUE   = 1                              ;
+   %GREEN  = 2                              ;
+   %YELLOW = 3                              ;
+   
+   %LINES_IN_CUR_FILE = l0069               ;
+   %LINES_TFL_FOR_CODUS = y0069             ;
+   
+   %SECUND_NEW = x0101                      ;
+   %SECUND_REC = x0100                      ;
+   %SECUND_COD = l0041                      ;
+   
+   %DZ_DRY = x0081                          ;
+   %DZ_WET = x0082                          ;
+   %DZ_ALU = x0083                          ;
 #-----------------------------------------------------------------------------
 
 #-----------------------------------------------------------------------------
 #  max number of lines of the current view file (to display the number of lines)
-   %СТРОК_В_ТФЛ_ДЛЯ_КОДУС = %СТРОК_В_ТЕКУЩЕМ_ФАЙЛЕ    ;
+   %LINES_TFL_FOR_CODUS = %LINES_IN_CUR_FILE    ;
 #-----------------------------------------------------------------------------
 
 #-----------------------------------------------------------------------------
-   %СЕКУНДА_НОВАЯ = %ВЫК                    ;
-if %СЕКУНДА_ЗАПИС ! %СЕКУНДА_КОДУС          ;
-   %СЕКУНДА_НОВАЯ = %ВКЛ                    ;
+   %SECUND_NEW = %OFF                       ;
+if %SECUND_REC ! %SECUND_COD                ;
+   %SECUND_NEW = %ONN                       ;
 fi                                          ; 
-   %СЕКУНДА_ЗАПИС = %СЕКУНДА_КОДУС          ;
+   %SECUND_REC = %SECUND_COD                ;
 #-----------------------------------------------------------------------------
 
 #-----------------------------------------------------------------------------
 #  Status of dosing controls for highlighting (S M P)
-if $REG06GL__V = %РУЧ                       ;
-   %ДЗ_СУХОГО  = %ГОЛУБОЙ                   ;
+if $REG06GL__V = %MAN                       ;
+   %DZ_DRY  = %BLUE                         ;
 el                                          ;
-   %ДЗ_СУХОГО  = %ЗЕЛЕНЫЙ                   ;
+   %DZ_DRY  = %GREEN                        ;
 fi                                          ;
-if $REG06R___V = %ВЫК                       ;  
-   %ДЗ_СУХОГО  = %КРАСНЫЙ                   ;
+if $REG06R___V = %OFF                       ;  
+   %DZ_DRY  = %RED                          ;
 fi                                          ;
 #--------------------------------------------
-if $REG07GL__V = %РУЧ                       ;
-   %ДЗ_МОКРОГО = %ГОЛУБОЙ                   ;
+if $REG07GL__V = %MAN                       ;
+   %DZ_WET = %BLUE                          ;
 el                                          ;
-   %ДЗ_МОКРОГО = %ЗЕЛЕНЫЙ                   ;
+   %DZ_WET = %GREEN                         ;
 fi                                          ;
-if $REG07R___V = %ВЫК                       ;
-   %ДЗ_МОКРОГО = %КРАСНЫЙ                   ;
+if $REG07R___V = %OFF                       ;
+   %DZ_WET = %RED                           ;
 fi                                          ;
 #--------------------------------------------
-if $REG08GL__V = %РУЧ                       ;
-   %ДЗ_АПАСТЫ  = %ГОЛУБОЙ                   ;
+if $REG08GL__V = %MAN                       ;
+   %DZ_ALU  = %BLUE                         ;
 el                                          ;
-   %ДЗ_АПАСТЫ  = %ЗЕЛЕНЫЙ                   ;
+   %DZ_ALU  = %GREEN                        ;
 fi                                          ;
-if $REG08R___V = %ВЫК                       ;
-   %ДЗ_АПАСТЫ  = %КРАСНЫЙ                   ;
+if $REG08R___V = %OFF                       ;
+   %DZ_ALU  = %RED                          ;
 fi                                          ;
 #--------------------------------------------
-if $REG09R___V    = %РУЧ                    ;
-   if $REG08___V  = %РУЧ                    ;
-      %ДЗ_АПАСТЫ  = %КРАСНЫЙ                ;
+if $REG09R___V    = %MAN                    ;
+   if $REG08___V  = %MAN                    ;
+      %DZ_ALU  = %RED                       ;
    fi                                       ;
 el                                          ;
-   if $REG09GL__V = %ВЫК                    ;
-      %ДЗ_АПАСТЫ  = %ГОЛУБОЙ                ;
+   if $REG09GL__V = %OFF                    ;
+      %DZ_ALU  = %BLUE                      ;
    el                                       ;
-      %ДЗ_АПАСТЫ  = %ЗЕЛЕНЫЙ                ;
+      %DZ_ALU  = %GREEN                     ;
    fi                                       ;
 fi                                          ;
 #-----------------------------------------------------------------------------
@@ -204,56 +207,56 @@ fi ;
 
 #-----------------------------------------------------------------------------
 # CPU usage display color
-   l0044 = %ЖЕЛТЫЙ   ;
-if l0001 < 50000     ;
-   l0044 = %ЗЕЛЕНЫЙ  ;
-fi                   ;
-if l0001 < 20000     ;
-   l0044 = %СИНИЙ    ;
-fi                   ;
-if l0001 < 1000      ;
-   l0044 = %КРАСНЫЙ  ;
-fi                   ;
+   l0044 = %YELLOW      ;
+if l0001 < 50000        ;
+   l0044 = %GREEN       ;
+fi                      ;
+if l0001 < 20000        ;
+   l0044 = %BLUE        ;
+fi                      ;
+if l0001 < 1000         ;
+   l0044 = %RED         ;
+fi                      ;
 #-----------------------------------------------------------------------------
-if l0031 = 1 ;               # если это экран N1 (СХЕМА АСУТП)
-   if l0007 = 64 ;           # если нажата клавиша TAB
-      l0007 = 56 ;           # установить нажатие клавиши F10 (СХЕМА Каналы)
-      l0032 = 1  ;           # установить флаг обработки нажатия в КОДУСе
+if l0031 = 1 ;               # if it is screen N1 (SCIM)
+   if l0007 = 64 ;           # if the TAB key is pressed
+      l0007 = 56 ;           # set keystroke F10 (CHART Channels)
+      l0032 = 1  ;           # set the click handling flag in CODUS
    fi ;
 fi ;
-if l0031 = 2 ;               # если это экран N2 (СХЕМА Каналы)
-   if l0007 = 64 ;           # если нажата клавиша TAB
-      l0007 = 48 ;           # установить нажатие клавиши F2  (СХЕМА АСУТП)
-      l0032 = 1  ;           # установить флаг обработки нажатия в КОДУСе
+if l0031 = 2 ;               # if it is screen N2 (SCHEME Channels)
+   if l0007 = 64 ;           # if the TAB key is pressed
+      l0007 = 48 ;           # set pressing the F2 key (SCIM)
+      l0032 = 1  ;           # set the click handling flag in CODUS
    fi ;
 fi ;
 
 #-----------------------------------------------------------------------------
-#  при нажатии клавиши ESC после закрытия окна ввода или запроса- 
-#  снимается звуковой сигнал
-if x0030 > 0            ;    # после нажатия клавиши ESC генерируется
+#  when you press the ESC key after closing the input or query window - 
+#  the sound signal is removed
+if x0030 > 0            ;    # after pressing the ESC key, it generates
    if x0101 = 1         ;    
-      l0007 = x0030     ;    # нажатие клавиши 'S' для снятия сигнала ошибки
+      l0007 = x0030     ;    # pressing the 'S' key to clear the error signal
       x0030 = 0         ;    
-      l0032 = 1         ;    # установить флаг обработки нажатия в КОДУСе
-      l0005 = 0         ;    # сбросить код посл генерир клавиши запр оператора
+      l0032 = 1         ;    # set the click handling flag in CODUS
+      l0005 = 0         ;    # reset the code after the generated operator lock keys
    fi                   ;
 fi                      ;    
-if l0007 = 59           ;    # если нажата клавиша ESC
-   x0030 = 19           ;    # установить нажатие клавиши 'S' для след цикла
+if l0007 = 59           ;    # if the ESC key is pressed
+   x0030 = 19           ;    # set keystroke 'S' for next cycle
 fi                      ;    
-if l0005 = 59           ;    # клавиша ESC сгенерир запросом оператора
-   x0030 = 19           ;    # установить нажатие клавиши 'S' для след цикла
+if l0005 = 59           ;    # ESC key generated by operator request
+   x0030 = 19           ;    # set keystroke 'S' for next cycle
 fi                      ;    
 
 #-----------------------------------------------------------------------------
-if l0007 = 57 ;                        # если выбран переход на экран "ТЕСТ1"
+if l0007 = 57 ;                        # if transition to the "TEST1" screen is selected
    if l0045 ! l0046 ;
       l0007 = 0 ;
       l0032 = 1 ;
    fi ;
 fi ;
-if l0007 = 58 ;                        # если выбран переход на экран "ТЕСТ2"
+if l0007 = 58 ;                        # if transition to the "TEST2" screen is selected
    if l0045 ! l0046 ;
       l0007 = 0 ;
       l0032 = 1 ;
@@ -262,48 +265,48 @@ fi ;
 
 #-----------------------------------------------------------------------------
 
-if l0006 = 0 ;               # Если нет ввода данных
+if l0006 = 0 ;               # If there is no input
 
-   if l0045 ! l0046 ;        # Если не введен пароль КИП и А
-      if x0025 = 1 ;         # если это контролируемый экран
-         l0020 = 1 ;         # запретить действия меню
-         l0021 = 1 ;         # запретить изменения
-         if l0007 = 67 ;     # если нажата клавиша ENTER -
-            l0033 = 5  ;     # вывести предупредительное сообщение
-            l0035 = 1  ;     # вывести сообщение, как ошибку
+   if l0045 ! l0046 ;        # If the master password is not entered
+      if x0025 = 1 ;         # if it is a controlled screen
+         l0020 = 1 ;         # disable menu actions
+         l0021 = 1 ;         # prohibit changes
+         if l0007 = 67 ;     # if the ENTER key is pressed -
+            l0033 = 5  ;     # display a warning message
+            l0035 = 1  ;     # display message as error
          fi ;
       fi ;
-      if l0007 = 12 ;        # Если нажата клавиша 'Д'- (ДИАПАЗОНЫ)
-         l0007 = 0  ;        # игнорировать это нажатие.
-         l0032 = 1  ;        # Установить флаг обработки нажатия в КОДУСе
-         l0033 = 4  ;        # Вывести предупредительное сообщение.
-         l0034 = 10 ;        # Отображение сообщения 10 сек
-         l0035 = 1  ;        # Вывести сообщение, как ошибку.
+      if l0007 = 12 ;        # If the 'D' key is pressed - (RANGE)
+         l0007 = 0  ;        # ignore this press.
+         l0032 = 1  ;        # Set the click handling flag in CODUS
+         l0033 = 4  ;        # Display a warning message.
+         l0034 = 10 ;        # Message display 10 sec
+         l0035 = 1  ;        # Display the message as an error.
       fi ;
-      if l0007 = 5  ;        # Если нажата клавиша 'У'- (УСТАНОВКИ)
-         l0007 = 0  ;        # игнорировать это нажатие.
-         l0032 = 1  ;        # Установить флаг обработки нажатия в КОДУСе
-         l0033 = 4  ;        # вывести предупредительное сообщение.
-         l0034 = 10 ;        # Отображение сообщения 10 сек
-         l0035 = 1  ;        # Вывести сообщение, как ошибку.
+      if l0007 = 5  ;        # If the 'Y' key is pressed - (SETTINGS)
+         l0007 = 0  ;        # ignore this press.
+         l0032 = 1  ;        # Set the click handling flag in CODUS
+         l0033 = 4  ;        # display a warning message.
+         l0034 = 10 ;        # Message display 10 sec
+         l0035 = 1  ;        # Display the message as an error.
       fi ;
    fi ;
 
-   if l0047 ! l0048 ;        # Если не введен пароль ТЕХНОЛОГА
-      if x0025 = 2 ;         # если на экране "СИГНАЛИЗАЦИЯ"
-         l0020 = 1 ;         # запретить действия меню
-         l0021 = 1 ;         # запретить изменения
-         if l0007 = 67 ;     # если нажата клавиша ENTER -
-            l0033 = 7  ;     # вывести предупредительное сообщение
-            l0035 = 1  ;     # вывести сообщение, как ошибку
+   if l0047 ! l0048 ;        # If the TECHNOLOGY password is not entered
+      if x0025 = 2 ;         # if on the "ALARMS" screen
+         l0020 = 1 ;         # disable menu actions
+         l0021 = 1 ;         # prohibit changes
+         if l0007 = 67 ;     # if the ENTER key is pressed -
+            l0033 = 7  ;     # display a warning message
+            l0035 = 1  ;     # display message as error
          fi ;
       fi ;
-      if l0007 = 3  ;        # Если нажата клавиша 'С'- (СИГНАЛИЗАЦИЯ)
-         l0007 = 0  ;        # игнорировать это нажатие.
-         l0032 = 1  ;        # Установить флаг обработки нажатия в КОДУСе
-         l0033 = 6  ;        # вывести предупредительное сообщение.
-         l0034 = 10 ;        # Отображение сообщения 10 сек
-         l0035 = 1  ;        # Вывести сообщение, как ошибку.
+      if l0007 = 3  ;        # If the 'C' key is pressed - (ALARM)
+         l0007 = 0  ;        # ignore this press.
+         l0032 = 1  ;        # Set the click handling flag in CODUS
+         l0033 = 6  ;        # display a warning message.
+         l0034 = 10 ;        # Message display 10 sec
+         l0035 = 1  ;        # Display the message as an error.
       fi ;
    fi ;
 
