@@ -1,12 +1,12 @@
 
-D: Time start programm CODUS: 29.11.2022  08:42:37 
+D: Time start programm CODUS: 25.12.2022  01:28:10 
 D: Version 14.0910 GW
 Create flag file.
 D: System initialization...
 D: Ok!
 Clear database array.
 D: Reading configure & system files...
-2022.11.29 08:42:38 D: Defined user command file name: [kkbkkt/codus.cmd].
+2022.12.25 01:28:10 D: Defined user command file name: [obaedz2/codus.cmd].
 Read config file.
 COMStat: Disable.
 NBWStat: Enable. 
@@ -19,7 +19,7 @@ Read command file.
 D: Ok!
 D: For load variables need 11911187 byte in memory.
 D: For load graphics need 81113376 byte in memory (not video).
-Current desktop resolution: 1366x768
+Current desktop resolution: 1368x768
 D: Set graphics mode: A:1024x768.
 Load font data file.
 Load cursors data file.
@@ -28,11 +28,15 @@ Init and start timers.
 Create thread COM port exchange.
 Create thread NetBIOS exchange.
 Start: Public cycle...
+D: ERROR create database [obaedz2/arc/20221225.dba].
+D: ERROR create database report [obaedz2/arc/20221225.dbr][R=-23].
+D: ERROR create database [obaedz2/arc/20221225.dba].
+D: ERROR create database report [obaedz2/arc/20221225.dbr][R=-23].
 D: Begin function Mexit. Release memory graphics occupied.
 D: Write flag end programm.
 D: Close current database files.
 D: Write archive buffers.
 D: Close database archive & report.
 D: Stop network interfaces.
-D: Time exit from programm CODUS: 29.11.2022  08:43:17 
+D: Time exit from programm CODUS: 25.12.2022  01:28:29 
 

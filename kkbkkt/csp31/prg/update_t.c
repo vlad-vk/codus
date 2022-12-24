@@ -1,3 +1,0 @@
-vd  UpdDataT(vd){
-}
-
