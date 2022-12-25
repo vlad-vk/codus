@@ -12,29 +12,29 @@ vd  far Start(vd){
     //-----------------------------------------------------------------------
     //  Чтение данных из файла конфигурации
     //--- Пауза перед запуском программы -----------------------
-    a=Config('r',CFGFile,"Common","WTRUNP",TmpStr);
+    a=Config('r',CFGFile,"Common","WTRUNP");
     TmpStr[4]=0; a=atoi(TmpStr); if(a>0&&a<9999)WStart=a;
     //--- Файл для записи-восстановления массива DBB -----------
-    a=Config('r',CFGFile,"Common","DATAFL",TmpStr);
+    a=Config('r',CFGFile,"Common","DATAFL");
     TmpStr[80]=0; if(strlen(TmpStr)>4) strcpy(FNDat,TmpStr);
     //--- Номер рабочей станции в сети -------------------------
-    a=Config('r',CFGFile,"Network","NWS",TmpStr);
+    a=Config('r',CFGFile,"Network","NWS");
     if(strlen(TmpStr)<2){ TmpStr[1]=TmpStr[0]; TmpStr[0]='0'; }
     if((atoi (TmpStr))==0){ TmpStr[0]='0'; TmpStr[1]='2'; } ; TmpStr[2]=0;
     WS_NB_SetNumber(TmpStr);        // номер рабочей станции в сети NetBIOS
     WS_SP_SetNumber(TmpStr);        // номер рабочей станции в сети RS485
     //--- Флаг работы по UDP -----------------------------------
-    a=Config('r',CFGFile,"Network","UDP",TmpStr);
+    a=Config('r',CFGFile,"Network","UDP");
     if(strcmpi(TmpStr,"ON")==0||strcmpi(TmpStr,"YES")==0||TmpStr[0]=='1'){
        UDP=1;
     }; TmpStr[0]=0;
     //--- IP PORT для прослушивания интерфейса
-    a=Config('r',CFGFile,"Network","PORT",TmpStr);
+    a=Config('r',CFGFile,"Network","PORT");
     TmpStr[5]=0; x=atoi(TmpStr); if(x>0&&x<65535) IPPORT=x;
     //--- IP адрес для отдельной посылки данных об этой станции (состоянии рег)
-    a=Config('r',CFGFile,"Network","IPTOS1",TmpStr);
+    a=Config('r',CFGFile,"Network","IPTOS1");
     TmpStr[15]=0; strcpy(IPTOS1,TmpStr);
-    a=Config('r',CFGFile,"Network","IPTOS2",TmpStr);
+    a=Config('r',CFGFile,"Network","IPTOS2");
     TmpStr[15]=0; strcpy(IPTOS2,TmpStr);
 
 

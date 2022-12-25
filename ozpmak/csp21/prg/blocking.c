@@ -65,27 +65,27 @@ vd  far blocking(vd){
     for(a=0;a<1;a++){
         if(O1ZIOPO__M>OFF and (O1ZIOPO__V==OFF and O1ZIOPC__V==OFF)){
            if((a=check_isp_open(5, 1))>0){
-               O1ZIOPO__M=OFF; Message(A1BNM+100+a); break;
+               O1ZIOPO__M=OFF; Message(A1BNM+100+a,0); break;
            }
         }
         if(O1ZIPPO__M>OFF and (O1ZIPPO__V==OFF and O1ZIPPC__V==OFF)){
            if((a=check_isp_open(5, 2))>0){
-               O1ZIPPO__M=OFF; Message(A1BNM+100+a); break;
+               O1ZIPPO__M=OFF; Message(A1BNM+100+a,0); break;
            }
         }
         if(O1ZOPPO__M>OFF and (O1ZOPPO__V==OFF and O1ZOPPC__V==OFF)){
            if((a=check_isp_open(5, 3))>0){
-               O1ZOPPO__M=OFF; Message(A1BNM+100+a); break;
+               O1ZOPPO__M=OFF; Message(A1BNM+100+a,0); break;
            }
         }
         if(O1ZOPAO__M>OFF and (O1ZOPAO__V==OFF and O1ZOPAC__V==OFF)){
            if((a=check_isp_open(5, 4))>0){ 
-               O1ZOPAO__M=OFF; Message(A1BNM+100+a); break;
+               O1ZOPAO__M=OFF; Message(A1BNM+100+a,0); break;
            }
         }
         if(O1VZO____M>OFF and (O1VZO____V==OFF and O1VZC____V==OFF)){
            if((a=check_isp_open(5, 5))>0){ 
-               O1VZO____M=OFF; Message(A1BNM+100+a); break; 
+               O1VZO____M=OFF; Message(A1BNM+100+a,0); break; 
            }
         }
     }
@@ -93,27 +93,27 @@ vd  far blocking(vd){
     for(a=0;a<1;a++){
         if(O2ZIOPO__M>OFF and (O2ZIOPO__V==OFF and O2ZIOPC__V==OFF)){
            if((a=check_isp_open(6,11))>0&&O2ZIOPO__M>OFF){ 
-               O2ZIOPO__M=OFF; Message(A2BNM+100+a); break;
+               O2ZIOPO__M=OFF; Message(A2BNM+100+a,0); break;
            }
         }
         if(O2ZIPPO__M>OFF and (O2ZIPPO__V==OFF and O2ZIPPC__V==OFF)){
            if((a=check_isp_open(6,12))>0&&O2ZIPPO__M>OFF){ 
-               O2ZIPPO__M=OFF; Message(A2BNM+100+a); break;
+               O2ZIPPO__M=OFF; Message(A2BNM+100+a,0); break;
            }
         }
         if(O2ZOPPO__M>OFF and (O2ZOPPO__V==OFF and O2ZOPPC__V==OFF)){
            if((a=check_isp_open(6,13))>0&&O2ZOPPO__M>OFF){ 
-               O2ZOPPO__M=OFF; Message(A2BNM+100+a); break;
+               O2ZOPPO__M=OFF; Message(A2BNM+100+a,0); break;
           }
         }
         if(O2ZOPAO__M>OFF and (O2ZOPAO__V==OFF and O2ZOPAC__V==OFF)){
            if((a=check_isp_open(6,14))>0&&O2ZOPAO__M>OFF){ 
-               O2ZOPAO__M=OFF; Message(A2BNM+100+a); break;
+               O2ZOPAO__M=OFF; Message(A2BNM+100+a,0); break;
            }
         }
         if(O2VZO____M>OFF and (O2VZO____V==OFF and O2VZC____V==OFF)){
            if((a=check_isp_open(6,15))>0&&O2VZO____M>OFF){ 
-               O2VZO____M=OFF; Message(A2BNM+100+a); break;
+               O2VZO____M=OFF; Message(A2BNM+100+a,0); break;
            }
         }
     }

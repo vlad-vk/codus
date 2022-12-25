@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 // регулятор набора давления АК3
 
-#include "..\_libpath.inc"
+#include "..\prg\_libpath.inc"
 #include "..\prg\run_prgv.h"
 #include "..\prg\run_prgr.h"
 
@@ -49,9 +49,9 @@ vd  far Regul_3p(vd){
         if(A3RPRA___M==SWITCH) A3RPRA___M=(A3RPRA___V>0) then_ OFF else_ AUTO;
         A3RPRA___V =A3RPRA___M;
         if(A3RPRA___V==AUTO){ 
-           Message(122+A3BNM); A3RPUU1__M=RMINUS;
+           Message(122+A3BNM,0); A3RPUU1__M=RMINUS;
         } else { 
-           Message(123+A3BNM); A3RPMO1__M=A3RPMO1__V=WO_Skip[RN1];
+           Message(123+A3BNM,0); A3RPMO1__M=A3RPMO1__V=WO_Skip[RN1];
            if(A3RPUU1__P==RPLUS ) A3RPUU1__M=RMINUS;
            if(A3RPUU1__P==RMINUS) A3RPUU1__M=RPLUS;
            AMAN=1;

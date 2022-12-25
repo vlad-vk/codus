@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 // регулятор набора давления АК1
 
-#include "..\_libpath.inc"
+#include "..\prg\_libpath.inc"
 #include "..\prg\run_prgv.h"
 #include "..\prg\run_prgr.h"
 
@@ -49,9 +49,9 @@ vd  far Regul_1p(vd){
         if(A1RPRA___M==SWITCH) A1RPRA___M=(A1RPRA___V>0) then_ OFF else_ AUTO;
         A1RPRA___V =A1RPRA___M;
         if(A1RPRA___V==AUTO){ 
-           Message(122+A1BNM); A1RPUU1__M=RMINUS;
+           Message(122+A1BNM,0); A1RPUU1__M=RMINUS;
         } else { 
-           Message(123+A1BNM); A1RPMO1__M=A1RPMO1__V=WO_Skip[RN1];
+           Message(123+A1BNM,0); A1RPMO1__M=A1RPMO1__V=WO_Skip[RN1];
            if(A1RPUU1__P==RPLUS ) A1RPUU1__M=RMINUS;
            if(A1RPUU1__P==RMINUS) A1RPUU1__M=RPLUS;
            AMAN=1;

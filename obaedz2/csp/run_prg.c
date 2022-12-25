@@ -1,5 +1,5 @@
-#include "_libpath.inc"
-#include "l:\lib\pctcp\pctcpudp.h"
+#include "libpath0.inc"
+#include "..\bin\pctcpudp.h"
 
 #include "reg\regul_a.h"
 

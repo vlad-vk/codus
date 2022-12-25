@@ -2,14 +2,14 @@ MAKE Version 3.6  Copyright (c) 1992 Borland International
 
 Available memory 15350320 bytes
 
-	D:\prog\bc31\bin\bcc.exe -c -mh -1 -DBCC -ID:\prog\bc31\inc -ID:\prog\bc31\inc -Ld:\ -LD:\prog\bc31\lib -e *.c 
+	E:\prog\bc31\bin\bcc.exe -c -mh -1 -DBCC -IE:\prog\bc31\inc -IE:\prog\bc31\inc -Ld:\ -LE:\prog\bc31\lib -e *.c 
 Borland C++  Version 3.1 Copyright (c) 1992 Borland International
 mod_ai.c:
 mod_ao.c:
 mod_di.c:
 mod_do.c:
 
-	Available memory 3380596
+	Available memory 3381700
  MOD_AI.OBJ
  MOD_AO.OBJ
  MOD_DI.OBJ

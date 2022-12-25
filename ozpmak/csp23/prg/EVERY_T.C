@@ -6,7 +6,7 @@ vd  far EveryTic(vd){
         if(FirstCall==PAMSG){
            if(access("run_prg.fln",4)==0) unlink("run_prg.fln");
            if(access("run_prg.fls",4)==0) unlink("run_prg.fls");
-           Message(18); 
+           Message(18,0); 
         }
         FirstCall++; 
     }

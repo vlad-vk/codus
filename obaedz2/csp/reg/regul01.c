@@ -1,8 +1,7 @@
-//  coding=cp866; version=2013013112; title="";
 //---------------------------------------------------------------------------
 //  Подкачка шлама
 
-#include "..\_libpath.inc"
+#include "..\prg\_libpath.inc"
 #include "..\prg\run_prgv.h"
 
 #include "regul_e.h"

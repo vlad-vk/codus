@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 // регулятор набора давления АК4
 
-#include "..\_libpath.inc"
+#include "..\prg\_libpath.inc"
 #include "..\prg\run_prgv.h"
 #include "..\prg\run_prgr.h"
 
@@ -49,9 +49,9 @@ vd  far Regul_4p(vd){
         if(A4RPRA___M==SWITCH) A4RPRA___M=(A4RPRA___V>0) then_ OFF else_ AUTO;
         A4RPRA___V =A4RPRA___M;
         if(A4RPRA___V==AUTO){ 
-           Message(122+A4BNM); A4RPUU1__M=RMINUS;
+           Message(122+A4BNM,0); A4RPUU1__M=RMINUS;
         } else { 
-           Message(123+A4BNM); A4RPMO1__M=A4RPMO1__V=WO_Skip[RN1];  
+           Message(123+A4BNM,0); A4RPMO1__M=A4RPMO1__V=WO_Skip[RN1];  
            if(A4RPUU1__P==RPLUS ) A4RPUU1__M=RMINUS;
            if(A4RPUU1__P==RMINUS) A4RPUU1__M=RPLUS;
            AMAN=1;

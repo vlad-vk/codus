@@ -30,7 +30,7 @@ do
     if [ "$k" = "4" ] ; then IP="$OZPI"; PF="--proxy=off"; fi
     if [ "$IP" = "" ] ; then continue; fi
     export ftp_proxy=$PR
-    cmd="wputm ${FL} ${PF} ${FILE}.exe ftp://${IP}"; echo $cmd; $cmd;
+    cmd="wputm ${FL} ${PF} ${FILE}.EXE ftp://${IP}"; echo $cmd; $cmd;
 #   cmd="wputm ${FL} ${PF} ${FILE}.INI ftp://${IP}"; echo $cmd; $cmd;
     echo -n "Press Enter to continue..."; read k;
 done

@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 // регулятор конденсата АК2
 
-#include "..\_libpath.inc"
+#include "..\prg\_libpath.inc"
 #include "..\prg\run_prgv.h"
 #include "..\prg\run_prgr.h"
 
@@ -51,9 +51,9 @@ vd  far Regul_2c(vd){
         if(A2RCRA___M==SWITCH) A2RCRA___M=(A2RCRA___V>0) then_ OFF else_ AUTO;
         A2RCRA___V =A2RCRA___M;
         if(A2RCRA___V==AUTO){ 
-           Message(120+A2BNM); 
+           Message(120+A2BNM,0); 
         } else { 
-           Message(121+A2BNM); A2RCMO___M=A2RCMO___V=WO_Skip[RN1];
+           Message(121+A2BNM,0); A2RCMO___M=A2RCMO___V=WO_Skip[RN1];
            if(A2RCUU___P==RPLUS ) A2RCUU___M=RMINUS;
            if(A2RCUU___P==RMINUS) A2RCUU___M=RPLUS;
            AMAN=1;

@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------------
-#include "..\_libpath.inc"
+#include "..\prg\_libpath.inc"
 #include "..\prg\run_prgv.h"
 #include "..\prg\run_prgr.h"
 
@@ -11,13 +11,13 @@ ui  far Ctrl_AI(_f far Val ,_f far VMin,
                 ui far VMinMes,ui far VNorMes,ui far VMaxMes,
                 ui far BN,     ui far BV){
   // Выход параметра за верхнюю границу
-  if ((Val>VMax)&&(VF==1)){ Message(VMaxMes); Bell(BN,BV); VF=2; }
+  if ((Val>VMax)&&(VF==1)){ Message(VMaxMes,0); Bell(BN,BV); VF=2; }
   // Выход параметра за нижнюю границу
-  if ((Val<VMin)&&(VF==1)){ Message(VMinMes); Bell(BN,BV); VF=0; }
+  if ((Val<VMin)&&(VF==1)){ Message(VMinMes,0); Bell(BN,BV); VF=0; }
   // Восстановление парраметра из верхней границы
-  if ((Val<VMax-(VMax*0.01))&&(VF==2)){ Message(VNorMes); Bell(BN,0); VF=1; }
+  if ((Val<VMax-(VMax*0.01))&&(VF==2)){ Message(VNorMes,0); Bell(BN,0); VF=1; }
   // Восстановление парраметра из нижней границы
-  if ((Val>VMin+(VMax*0.01))&&(VF==0)){ Message(VNorMes); Bell(BN,0); VF=1; }
+  if ((Val>VMin+(VMax*0.01))&&(VF==0)){ Message(VNorMes,0); Bell(BN,0); VF=1; }
   if ((Val>VMin+(VMax*0.01))&&(Val<VMax-(VMax*0.01))){ VF=1; }
   return(VF);
 }

@@ -1,6 +1,6 @@
 //---------------------------------------------------------------------------
 //  coding=cp866; version=2013013112; title="";
-#include "..\_libpath.inc"
+#include "..\prg\_libpath.inc"
 #include "..\prg\run_prgv.h"
 
 #include "other_e.h"

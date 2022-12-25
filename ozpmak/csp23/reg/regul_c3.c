@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 // регулятор конденсата АК3
 
-#include "..\_libpath.inc"
+#include "..\prg\_libpath.inc"
 #include "..\prg\run_prgv.h"
 #include "..\prg\run_prgr.h"
 
@@ -51,9 +51,9 @@ vd  far Regul_3c(vd){
         if(A3RCRA___M==SWITCH) A3RCRA___M=(A3RCRA___V>0) then_ OFF else_ AUTO;
         A3RCRA___V =A3RCRA___M;
         if(A3RCRA___V==AUTO){ 
-           Message(120+A3BNM); 
+           Message(120+A3BNM,0); 
         } else { 
-           Message(121+A3BNM); A3RCMO___M=A3RCMO___V=WO_Skip[RN1];
+           Message(121+A3BNM,0); A3RCMO___M=A3RCMO___V=WO_Skip[RN1];
            if(A3RCUU___P==RPLUS ) A3RCUU___M=RMINUS;
            if(A3RCUU___P==RMINUS) A3RCUU___M=RPLUS;
            AMAN=1;

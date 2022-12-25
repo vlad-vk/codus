@@ -1,7 +1,7 @@
 //----------------------------------------------------------------------------
 // Общие функции регуляторов
 
-#include "..\_libpath.inc"
+#include "..\prg\_libpath.inc"
 #include "..\prg\run_prgv.h"
 #include "..\prg\run_prgr.h"
 

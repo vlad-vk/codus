@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 // регулятор конденсата АК4
 
-#include "..\_libpath.inc"
+#include "..\prg\_libpath.inc"
 #include "..\prg\run_prgv.h"
 #include "..\prg\run_prgr.h"
 
@@ -51,9 +51,9 @@ vd  far Regul_4c(vd){
         if(A4RCRA___M==SWITCH) A4RCRA___M=(A4RCRA___V>0) then_ OFF else_ AUTO;
         A4RCRA___V =A4RCRA___M;
         if(A4RCRA___V==AUTO){ 
-           Message(120+A4BNM); 
+           Message(120+A4BNM,0); 
         } else { 
-           Message(121+A4BNM); A4RCMO___M=A4RCMO___V=WO_Skip[RN1];
+           Message(121+A4BNM,0); A4RCMO___M=A4RCMO___V=WO_Skip[RN1];
            if(A4RCUU___P==RPLUS ) A4RCUU___M=RMINUS;
            if(A4RCUU___P==RMINUS) A4RCUU___M=RPLUS;
            AMAN=1;

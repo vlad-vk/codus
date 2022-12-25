@@ -2,7 +2,7 @@
 //---------------------------------------------------------------------------
 // Температура воды
 
-#include "..\_libpath.inc"
+#include "..\prg\_libpath.inc"
 #include "..\prg\run_prgv.h"
 
 #include "regul_e.h"

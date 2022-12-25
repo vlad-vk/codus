@@ -28,10 +28,10 @@ obj\regul12.obj+
 obj\regul14.obj+
 obj\regul55.obj+
 obj\run_prg.obj+
-l:\lib\out\c0h.obj
+..\bin\c0h.obj
 obaedz2
 /c/i
-l:\lib\out\codcs1.lib+
-l:\lib\out\emu.lib+
-l:\lib\out\mathh.lib+
-l:\lib\out\ch.lib
+..\bin\codcs1.lib+
+..\bin\emu.lib+
+..\bin\mathh.lib+
+..\bin\ch.lib

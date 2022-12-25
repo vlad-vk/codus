@@ -1,6 +1,6 @@
 //---------------------------------------------------------------------------
 
-#include "..\_libpath.inc"
+#include "..\prg\_libpath.inc"
 #include "..\prg\run_prgv.h"
 #include "..\prg\run_prgr.h"
 
@@ -245,7 +245,7 @@ int Chk_SBP4(vd){
               // последний раз после проверки счетчика перед проверкой
               // исполнителей- обнулить счетчики и таймеры (когда прошло 5сек)
               A4STEPZ__V=0; A4STEPC__V=0; Set_BV4(A4STEPW__V);
-              Message(107+A4BNM);
+              Message(107+A4BNM,0);
            }
            //-----------
            // установить режим закрытия исполнителей по разблокировке СБУ
@@ -257,31 +257,31 @@ int Chk_SBP4(vd){
            Set_ST4(911);
            switch ( Check_TO(A4BTM+1, A4TZOPO__R* SEC, I4ZIOPC__V,'=',ON,  1 )){
              case RUN: { A4STEPZ__V=A4TZOPO__R; A4STEPC__V=CNTTO[A4BTM+1]; return(1); }
-             case BAD: { Clear_TO(A4BTM+1); Message(141+A4BNM); Bell(4,1); return(1); }
+             case BAD: { Clear_TO(A4BTM+1); Message(141+A4BNM,0); Bell(4,1); return(1); }
            }
            // задвижка впуска перепускного пара закрыта? 
            Set_ST4(912);
            switch ( Check_TO(A4BTM+2, A4TZPPO__R* SEC, I4ZIPPC__V,'=',ON,  1 )){
              case RUN: { A4STEPZ__V=A4TZPPO__R; A4STEPC__V=CNTTO[A4BTM+2]; return(1); }
-             case BAD: { Clear_TO(A4BTM+2); Message(142+A4BNM); Bell(4,1); return(1); }
+             case BAD: { Clear_TO(A4BTM+2); Message(142+A4BNM,0); Bell(4,1); return(1); }
            }
            // задвижка выпуска перепускного пара закрыта?
            Set_ST4(913);
            switch ( Check_TO(A4BTM+3, A4TZPPO__R* SEC, I4ZOPPC__V,'=',ON,  1 )){
              case RUN: { A4STEPZ__V=A4TZPPO__R; A4STEPC__V=CNTTO[A4BTM+3]; return(1); }
-             case BAD: { Clear_TO(A4BTM+3); Message(143+A4BNM); Bell(4,1); return(1); }
+             case BAD: { Clear_TO(A4BTM+3); Message(143+A4BNM,0); Bell(4,1); return(1); }
            }
            // задвижка выпуска пара в атмосферу закрыта?
            Set_ST4(914);
            switch ( Check_TO(A4BTM+4, A4TZSPA__R* SEC, I4ZOPAC__V,'=',ON,  1 )){
              case RUN: { A4STEPZ__V=A4TZSPA__R; A4STEPC__V=CNTTO[A4BTM+4]; return(1); }
-             case BAD: { Clear_TO(A4BTM+4); Message(144+A4BNM); Bell(4,1); return(1); }
+             case BAD: { Clear_TO(A4BTM+4); Message(144+A4BNM,0); Bell(4,1); return(1); }
            }
            // задвижка вакуума закрыта?
            Set_ST4(915);
            switch ( Check_TO(A4BTM+5, A4TVZO___R* SEC, I4VZC____V,'=',ON,  1 )){
              case RUN: { A4STEPZ__V=A4TVZO___R; A4STEPC__V=CNTTO[A4BTM+5]; return(1); }
-             case BAD: { Clear_TO(A4BTM+5); Message(145+A4BNM); Bell(4,1); return(1); }
+             case BAD: { Clear_TO(A4BTM+5); Message(145+A4BNM,0); Bell(4,1); return(1); }
            }
            // если СБУ было разблокировано в режиме ВАКУУМИРОВАНИЯ
            if(A4STEPP__V==3){
@@ -289,7 +289,7 @@ int Chk_SBP4(vd){
            Set_ST4(916);
            switch ( Check_TO(A4BTM+6, A4RCHKF__R* SEC, I4KOCC___V,'=',ON,  1 )){
              case RUN: { A4STEPZ__V=A4RCHKF__R; A4STEPC__V=CNTTO[A4BTM+6]; return(1); }
-             case BAD: { Clear_TO(A4BTM+6); Message(146+A4BNM); Bell(4,1); return(1); }
+             case BAD: { Clear_TO(A4BTM+6); Message(146+A4BNM,0); Bell(4,1); return(1); }
            } }
            // если все закрыто- перейти в режим ожидания разблокировки СБУ
            Set_ST4(917); return(1);
@@ -304,10 +304,10 @@ int Chk_SBP4(vd){
            // если разблокировали СБУ в каком-то режиме,но все исполнители
            // закрыты- выдать сообщение с указанием режима на котором 
            // заблокировали СБУ
-           if(A4STEPW__V<900){ Set_BV4(A4STEPW__V); Message(106+A4BNM); }
+           if(A4STEPW__V<900){ Set_BV4(A4STEPW__V); Message(106+A4BNM,0); }
            // если исполнители были закрыты после разблокировки СБУ-
            // выдать сообщение о том, что исполнители закрыли
-           if(A4STEPW__V>900){ Message(108+A4BNM ); }
+           if(A4STEPW__V>900){ Message(108+A4BNM,0); }
            Set_ST4(900);
         }
       } else {
@@ -318,7 +318,7 @@ int Chk_SBP4(vd){
            // ожидать 5сек стабильной блокировки СБУ
            if(A4SBPC<5){ A4SBPC++; return(1); }
            // перейти в режим ожидания
-           Message(109+A4BNM); Set_BV4(910); Set_ST4(50); return(1);
+           Message(109+A4BNM,0); Set_BV4(910); Set_ST4(50); return(1);
         }
         // когда СБУ заблокированы- сбросить счетчики блокировки СБУ и выйти
         A4SBPT=0;
@@ -332,49 +332,49 @@ int Chk_SBP4(vd){
 //  Проверка исполнителей при работе с крышками
 int Chk_IF4(int mode){
     // задвижка впуска острого пара закрыта?        [x1.i01 (IxZIOPC) = 1]
-    if(I4ZIOPC__V!=ON){ Message(141+A4BNM); return(0); }
+    if(I4ZIOPC__V!=ON){ Message(141+A4BNM,0); return(0); }
     // задвижка впуска перепускного пара закрыта?   [x1.i03 (IxZIPPC) = 1]
-    if(I4ZIPPC__V!=ON){ Message(142+A4BNM); return(0); }
+    if(I4ZIPPC__V!=ON){ Message(142+A4BNM,0); return(0); }
     // задвижка выпуска перепускного пара закрыта?  [x1.i07 (IxZOPPC) = 1]
-    if(I4ZOPPC__V!=ON){ Message(143+A4BNM); return(0); }
+    if(I4ZOPPC__V!=ON){ Message(143+A4BNM,0); return(0); }
     // задвижка выпуска пара в атмосферу закрыта?   [x1.i09 (IxZOPAC) = 1]
-    if(I4ZOPAC__V!=ON){ Message(144+A4BNM); return(0); }
+    if(I4ZOPAC__V!=ON){ Message(144+A4BNM,0); return(0); }
     // задвижка вакуума закрыта?                    [x2.i02 (IxVZC__) = 1]
-    if(I4VZC____V!=ON){ Message(145+A4BNM); return(0); }
+    if(I4VZC____V!=ON){ Message(145+A4BNM,0); return(0); }
     // клапан выпуска конденсата закрыт?            [x5.i07 (IxKOCC_) = 1]
-    if(I4KOCC___V!=ON){ Message(146+A4BNM); return(0); }
+    if(I4KOCC___V!=ON){ Message(146+A4BNM,0); return(0); }
     // СБУ разблокирован?                           [x7.i09 (IxSBP1R) = 1]
     //                                              [x8.i09 (IxSBP2R) = 1]
     if(mode==0 or mode==1){
-      if(I4SBP1R__V==0){ Message(149+A4BNM); return(0); }
+      if(I4SBP1R__V==0){ Message(149+A4BNM,0); return(0); }
     }
     // нет давления в автоклаве?                    [x7.i07 (IxP1_N_) = 1]
     //                                              [x8.i07 (IxP1_N_) = 1]        
     if(mode==0 or mode==1){
-      if(I4P1_N___V==0){ Message(156+A4BNM); return(0); }
+      if(I4P1_N___V==0){ Message(156+A4BNM,0); return(0); }
     }
     // есть напряжение на щите управл гидронасосом? [x5.i00 (IxVACKR) = 1]
     if(mode==0 or mode==1){
-      if(I4VACKR__V!=ON){ Message(157+A4BNM); return(0); }
+      if(I4VACKR__V!=ON){ Message(157+A4BNM,0); return(0); }
     }
     // режим управления крышками автоклава дистанц? [x5.i03 (IxLUCDU) = 1]
     if(mode==0 or mode==1){
-      if(I4LUCDU__V!=ON){ Message(158+A4BNM); return(0); }
+      if(I4LUCDU__V!=ON){ Message(158+A4BNM,0); return(0); }
     }
     // режим управления автоклавом дистанция(ПК)?
     if(mode==0 or mode==1){
-      if(I4DU_____V!=ON){ Message(188+A4BNM); return(0); }
+      if(I4DU_____V!=ON){ Message(188+A4BNM,0); return(0); }
     }
     // проверка работы (включенного состояния) гидронасоса 
     // ожидание включения гидронасоса               [x5.i01 (IxGNS_1) = 1]
     if(mode>0){
-      if(I4GNS_1__V!=ON){ Message(160+A4BNM); return(0); }
+      if(I4GNS_1__V!=ON){ Message(160+A4BNM,0); return(0); }
     }
     // если нажата кнопка СТОП
     if(mode>0){
        // если ДА - переходим в режим ГИДРОНАСОС
        if(I4KR1SB__V==ON || I4GNS0B__V==ON){
-          A4CISP=0; Message(168+A4BNM); Set_BV4(870); Set_ST4(870); return(0);
+          A4CISP=0; Message(168+A4BNM,0); Set_BV4(870); Set_ST4(870); return(0);
        }
     }
     return(1);
@@ -413,31 +413,31 @@ vd  far Regul_04(vd){
         //  если выбран РУЧНОЙ РЕЖИМ управления и введен пароль
         //  запуска или останова цикла
         if((A4STEPW__M<=10)){
-            A4STEPW__V =A4STEPW__M; Message(130+A4BNM);
+            A4STEPW__V =A4STEPW__M; Message(130+A4BNM,0);
         }
         //  если выбран режим "ОТКРЫТИЕ" и текущий режим "ОЖИДАНИЕ"
         if((A4STEPW__M>=100) and (A4STEPW__M< 200) and (A4STEPW__V<=10)){
-            A4STEPW__V =A4STEPW__M;  Message(131+A4BNM);
+            A4STEPW__V =A4STEPW__M;  Message(131+A4BNM,0);
         }
         //  если выбран режим "ЗАКРЫТИЕ" и текущий режим "ОЖИДАНИЕ"
         if((A4STEPW__M>=200) and (A4STEPW__M< 300) and (A4STEPW__V<=10)){
-            A4STEPW__V =A4STEPW__M;  Message(132+A4BNM);
+            A4STEPW__V =A4STEPW__M;  Message(132+A4BNM,0);
         }
         //  если выбран режим "ВАКУУМИРОВАНИЕ" и текущий режим "ОЖИДАНИЕ"
         if((A4STEPW__M>=300) and (A4STEPW__M< 400) and (A4STEPW__V<=10)){
-            A4STEPW__V =A4STEPW__M;  Message(133+A4BNM);
+            A4STEPW__V =A4STEPW__M;  Message(133+A4BNM,0);
         }
         //  если выбран режим "НАБОР ДАВЛЕНИЯ" и текущий режим "ОЖИДАНИЕ"
         if((A4STEPW__M>=400) and (A4STEPW__M< 500) and (A4STEPW__V<=10)){
-            A4STEPW__V =A4STEPW__M;  Message(134+A4BNM); A4NAKPPREM=A4NAKPP__R;
+            A4STEPW__V =A4STEPW__M;  Message(134+A4BNM,0); A4NAKPPREM=A4NAKPP__R;
         }
         //  если выбран режим "ВЫДЕРЖКА" и текущий режим "ОЖИДАНИЕ"
         if((A4STEPW__M>=500) and (A4STEPW__M< 600) and (A4STEPW__V<=10)){
-            A4STEPW__V =A4STEPW__M;  Message(135+A4BNM);
+            A4STEPW__V =A4STEPW__M;  Message(135+A4BNM,0);
         }
         //  если выбран режим "СБРОС ДАВЛЕНИЯ" и текущий режим "ОЖИДАНИЕ"
         if((A4STEPW__M>=600) and (A4STEPW__M< 700) and (A4STEPW__V<=10)){
-            A4STEPW__V =A4STEPW__M;  Message(136+A4BNM);
+            A4STEPW__V =A4STEPW__M;  Message(136+A4BNM,0);
         }
         //-------------------------------------------------------------------
         //  установка вновь определенного режима работы 
@@ -479,11 +479,11 @@ vd  far Regul_04(vd){
        if(S4MDUP___V!=S4MDU____V){
           // переведено на ЩИТ - перевести программу в режим "ОЖИДАНИЕ"
           if(S4MDU____V==0){
-             Message(137+A4BNM); Set_BV4(0); Set_ST4(50);
+             Message(137+A4BNM,0); Set_BV4(0); Set_ST4(50);
           }
           // переведено на ПК  - выдать сообщение  и в режим "ОЖИДАНИЕ"
           if(S4MDU____V==1){
-             Message(138+A4BNM); Set_BV4(0); Set_ST4(50);
+             Message(138+A4BNM,0); Set_BV4(0); Set_ST4(50);
           }
        }; S4MDUP___V=S4MDU____V;
        //-------------------------------------------
@@ -507,7 +507,7 @@ vd  far Regul_04(vd){
         // Если нажата- перейти на шаг 870
         if(V4GNS1BS_V<1){
            if(I4GNS1B__V>0){
-              Message(183+A4BNM); O4GNS____M=ON; A4CISP=0;
+              Message(183+A4BNM,0); O4GNS____M=ON; A4CISP=0;
               Set_BV4(50); V4GNS1BS_V=1; Set_ST4(870); return;
            }
         }
@@ -529,7 +529,7 @@ vd  far Regul_04(vd){
               // определить его номер
               if(Get_RA4(1)>0){
                  // перейти на режим ПЕРЕБРОС
-                 Message(129+A4BNM); Set_BV4(0); Set_ST4(700);
+                 Message(129+A4BNM,0); Set_BV4(0); Set_ST4(700);
               }
            }
         }
@@ -571,7 +571,7 @@ vd  far Regul_04(vd){
        Clear_TA4();
        A4PPSTEP_V=0;
        // перейти в режим ОЖИДАНИЕ
-       Message(189+A4BNM); Set_BV4(50); Set_ST4(0);
+       Message(189+A4BNM,0); Set_BV4(50); Set_ST4(0);
        return;
     }
 //  // ----------------------------------------------------------------------
@@ -594,7 +594,7 @@ vd  far Regul_04(vd){
         // если нажата кнопка выключения гидронасоса- выдать комманду на 
         // выключение гидронасоса
         if(I4GNS0B__V==ON){ 
-           Message(184+A4BNM);
+           Message(184+A4BNM,0);
            // выдать команду на выключение гидронасоса
            O4GNS____M=OFF;
            // сбросить флаг состояния кнопки включения гидронасоса
@@ -612,8 +612,8 @@ vd  far Regul_04(vd){
            // ждать выключение гидронасоса
            switch( Check_TO(A4BTM+1,60*SEC, I4GNS0B__V,'=',ON, 1)){
               case RUN: { return; }
-              case BAD: { Message(186+A4BNM); Bell(4,1); break; }
-              case END: { Message(185+A4BNM); break; }
+              case BAD: { Message(186+A4BNM,0); Bell(4,1); break; }
+              case END: { Message(185+A4BNM,0); break; }
            }
            // перейти в режим ожидания
            Set_BV4(870); Set_ST4(50); return;
@@ -623,7 +623,7 @@ vd  far Regul_04(vd){
            A4CISP++; 
            if(A4CISP>1){ 
               O4GNS____M=OFF; V4GNS1BS_V=0;
-              Message(187+A4BNM); Set_BV4(870); Set_ST4(50); 
+              Message(187+A4BNM,0); Set_BV4(870); Set_ST4(50); 
            }
            return; 
         }; A4CISP=0;
@@ -635,7 +635,7 @@ vd  far Regul_04(vd){
         //                                              [x8.i12 (IxKR2OB) = 1]
         if(I4KR1OBS_V<1 and I4KR1CBS_V<1){
            if(I4KR1OB__V>0){
-              Message(174+A4BNM); A4CISP=0;
+              Message(174+A4BNM,0); A4CISP=0;
               Set_BV4(50); I4KR1OBS_V=1; V4GNS1BS_V=1; Set_ST4(100); return;
            }
         }
@@ -644,7 +644,7 @@ vd  far Regul_04(vd){
         //                                              [x8.i13 (IxKR2CB) = 1]
         if(I4KR1OBS_V<1 and I4KR1CBS_V<1){
            if(I4KR1CB__V>0){
-              Message(176+A4BNM);  A4CISP=0;
+              Message(176+A4BNM,0);  A4CISP=0;
               Set_BV4(50); I4KR1CBS_V=1; V4GNS1BS_V=1; Set_ST4(200); return;
            }
         }
@@ -675,12 +675,12 @@ vd  far Regul_04(vd){
            A4CISP++;
            if(A4CISP>1){ 
               O4GNS____M=OFF; V4GNS1BS_V=0;
-              Message(187+A4BNM); Set_BV4(870); Set_ST4(870); 
+              Message(187+A4BNM,0); Set_BV4(870); Set_ST4(870); 
            }
            return;
         }; A4CISP=0;
         // сообщение о начале режима
-        if(A4STEPW__V!=126){ Message(195+A4BNM); }
+        if(A4STEPW__V!=126){ Message(195+A4BNM,0); }
         // хомут поднят?                                [x7.i00 (IxHM1UP) = 1]
         //                                              [x8.i00 (IxHM2UP) = 1]
         Set_ST4(126);
@@ -690,7 +690,7 @@ vd  far Regul_04(vd){
         switch ( Check_TO(A4BTM+14,A4THMUP__R*SEC, I4KR_TMP_V,'=',ON, 1)){
             case RUN: { A4STEPZ__V=A4THMUP__R;A4STEPC__V =CNTTO[A4BTM+14]; return; }
             case BAD: { 
-                        Clear_TO(A4BTM+14); Message(151+A4BNM);
+                        Clear_TO(A4BTM+14); Message(151+A4BNM,0);
                         // если это первый шаг контроля- увеличить счетчик 
                         // контроля и дать команду на поднятие хомута
                         if(A4TEMP<1){ 
@@ -728,7 +728,7 @@ vd  far Regul_04(vd){
            A4CISP++;
            if(A4CISP>1){ 
               O4GNS____M=OFF; V4GNS1BS_V=0;
-              Message(187+A4BNM); Set_BV4(870); Set_ST4(870); 
+              Message(187+A4BNM,0); Set_BV4(870); Set_ST4(870); 
            }
            return;
         }; A4CISP=0;
@@ -763,7 +763,7 @@ vd  far Regul_04(vd){
         switch (Check_TO( A4BTM+16,A4TBYRT__R*SEC,I4KR_TMP_V,'=',ON, 1)){
             case RUN: { A4STEPZ__V=A4TBYRT__R; A4STEPC__V=CNTTO[A4BTM+16]; return; }
             case BAD: { 
-                        Clear_TO(A4BTM+16); Message(154+A4BNM); Bell(4,1); 
+                        Clear_TO(A4BTM+16); Message(154+A4BNM,0); Bell(4,1); 
                         Set_BV4(132); Set_ST4(870);
                         return; 
                       }
@@ -788,7 +788,7 @@ vd  far Regul_04(vd){
         switch (Check_TO( A4BTM+14,A4THMUP__R*SEC,I4KR_TMP_V, '=',ON, 1)){
             case RUN: { A4STEPZ__V=A4THMUP__R; A4STEPC__V=CNTTO[A4BTM+14]; return; }
             case BAD: { 
-                        Clear_TO(A4BTM+14); Message(151+A4BNM); Bell(4,1);
+                        Clear_TO(A4BTM+14); Message(151+A4BNM,0); Bell(4,1);
                         Set_BV4(131); Set_ST4(870);    return;
                       }
         }
@@ -810,7 +810,7 @@ vd  far Regul_04(vd){
         switch (Check_TO( A4BTM+18,A4TKRO___R*SEC, I4KR_TMP_V, '=',ON,1)){
             case RUN: { A4STEPZ__V=A4TKRO___R; A4STEPC__V=CNTTO[A4BTM+18]; return; }
             case BAD: { 
-                        Clear_TO(A4BTM+18); Message(152+A4BNM); Bell(4,1); 
+                        Clear_TO(A4BTM+18); Message(152+A4BNM,0); Bell(4,1); 
                         Set_BV4(133); Set_ST4(870);
                         return; 
                       }
@@ -842,7 +842,7 @@ vd  far Regul_04(vd){
            A4CISP++;
            if(A4CISP>1){ 
               O4GNS____M=OFF; V4GNS1BS_V=0;
-              Message(187+A4BNM); Set_BV4(870); Set_ST4(870); 
+              Message(187+A4BNM,0); Set_BV4(870); Set_ST4(870); 
            }
            return;
         }; A4CISP=0;
@@ -858,7 +858,7 @@ vd  far Regul_04(vd){
         switch (Check_TO( A4BTM+14,A4THMUP__R*SEC,I4KR_TMP_V,'=',ON, 1)){
             case RUN: { A4STEPZ__V=A4THMUP__R; A4STEPC__V=CNTTO[A4BTM+14]; return; }
             case BAD: { 
-                        Clear_TO(A4BTM+14); Message(150+A4BNM); Bell(4,1); 
+                        Clear_TO(A4BTM+14); Message(150+A4BNM,0); Bell(4,1); 
                         Set_BV4(134); Set_ST4(870);
                         return; 
                       }
@@ -868,9 +868,9 @@ vd  far Regul_04(vd){
         Set_KR4(1,STOP,STOP,STOP);
         Set_KR4(2,STOP,STOP,STOP);
         // сообщение об окончании режима
-        Message(191+A4BNM);
+        Message(191+A4BNM,0);
         // перевод управления автоклавом в режим "ГИДРОНАСОС"->"ОЖИДАНИЕ"|"СБУ"
-        Message(197+A4BNM); Set_BV4(141); Set_ST4(870); return;
+        Message(197+A4BNM,0); Set_BV4(141); Set_ST4(870); return;
     }
 //  // ----------------------------------------------------------------------
 
@@ -896,12 +896,12 @@ vd  far Regul_04(vd){
            A4CISP++;
            if(A4CISP>1){ 
               O4GNS____M=OFF; V4GNS1BS_V=0;
-              Message(187+A4BNM); Set_BV4(870); Set_ST4(870); 
+              Message(187+A4BNM,0); Set_BV4(870); Set_ST4(870); 
            }
            return;
         }; A4CISP=0;
         // сообщение о начале режима
-        if(A4STEPW__V==200){ Message(196+A4BNM); }
+        if(A4STEPW__V==200){ Message(196+A4BNM,0); }
         //--------
         // хомут опущен?                                [x7.i01 (IxHM1DN) = 1]
         Set_ST4(226);
@@ -911,7 +911,7 @@ vd  far Regul_04(vd){
         switch ( Check_TO (A4BTM+14, A4THMUP__R*SEC,   I4KR_TMP_V,'=',ON, 1)){
             case RUN: { A4STEPZ__V=A4THMUP__R; A4STEPC__V = CNTTO[A4BTM+14]; return; }
             case BAD: { 
-                        Clear_TO(A4BTM+14); Message(150+A4BNM); Bell(4,1); 
+                        Clear_TO(A4BTM+14); Message(150+A4BNM,0); Bell(4,1); 
                         Set_BV4(226); Set_ST4(870);   return; 
                       }
         }
@@ -926,7 +926,7 @@ vd  far Regul_04(vd){
         switch ( Check_TO (A4BTM+15, A4TBYRT__R*SEC,I4KR_TMP_V,'=',ON, 1)){
             case RUN: { A4STEPZ__V=A4TBYRT__R; A4STEPC__V=CNTTO[A4BTM+15]; return; }
             case BAD: { 
-                        Clear_TO(A4BTM+15); Message(154+A4BNM); Bell(4,1);
+                        Clear_TO(A4BTM+15); Message(154+A4BNM,0); Bell(4,1);
                         Set_BV4(228); Set_ST4(870);   return; 
                       }
         }
@@ -953,7 +953,7 @@ vd  far Regul_04(vd){
            A4CISP++;
            if(A4CISP>1){ 
               O4GNS____M=OFF; V4GNS1BS_V=0;
-              Message(187+A4BNM); Set_BV4(870); Set_ST4(870); 
+              Message(187+A4BNM,0); Set_BV4(870); Set_ST4(870); 
            }
            return;
         }; A4CISP=0;
@@ -970,7 +970,7 @@ vd  far Regul_04(vd){
         switch (Check_TO(A4BTM+14,A4TKRO___R*SEC, I4KR_TMP_V,'=',ON, 1)){
             case RUN: { A4STEPZ__V=A4TKRO___R; A4STEPC__V=CNTTO[A4BTM+14]; return; }
             case BAD: { 
-                        Clear_TO(A4BTM+14); Message(152+A4BNM); Bell(4,1);
+                        Clear_TO(A4BTM+14); Message(152+A4BNM,0); Bell(4,1);
                         Set_BV4(231); Set_ST4(870);   return; 
                       }
         }
@@ -994,7 +994,7 @@ vd  far Regul_04(vd){
         switch (Check_TO(A4BTM+16,A4THMUP__R*SEC,I4KR_TMP_V,'=',ON, 1)){
             case RUN: { A4STEPZ__V=A4THMUP__R; A4STEPC__V=CNTTO[A4BTM+16]; return; }
             case BAD: { 
-                        Clear_TO(A4BTM+16); Message(151+A4BNM); Bell(4,1);
+                        Clear_TO(A4BTM+16); Message(151+A4BNM,0); Bell(4,1);
                         Set_BV4(232); Set_ST4(870);   return; 
                       }
         }
@@ -1023,7 +1023,7 @@ vd  far Regul_04(vd){
            A4CISP++;
            if(A4CISP>1){ 
               O4GNS____M=OFF; V4GNS1BS_V=0;
-              Message(187+A4BNM); Set_BV4(870); Set_ST4(870); 
+              Message(187+A4BNM,0); Set_BV4(870); Set_ST4(870); 
            }
            return;
         }; A4CISP=0;
@@ -1040,7 +1040,7 @@ vd  far Regul_04(vd){
         switch (Check_TO (A4BTM+14,A4TKRO___R*SEC,I4KR_TMP_V,'=',ON, 1)){
             case RUN: { A4STEPZ__V=A4TKRO___R; A4STEPC__V=CNTTO[A4BTM+14]; return; }
             case BAD: { 
-                        Clear_TO(A4BTM+14); Message(153+A4BNM); Bell(4,1);
+                        Clear_TO(A4BTM+14); Message(153+A4BNM,0); Bell(4,1);
                         Set_BV4(236); Set_ST4(870); return; 
                       }
         }
@@ -1064,7 +1064,7 @@ vd  far Regul_04(vd){
         switch (Check_TO (A4BTM+16,A4TBYRT__R*SEC,I4KR_TMP_V,'=',ON, 1)){
             case RUN: { A4STEPZ__V=A4TBYRT__R; A4STEPC__V=CNTTO[A4BTM+16]; return; }
             case BAD: { 
-                        Clear_TO(A4BTM+16); Message(155+A4BNM); Bell(4,1);
+                        Clear_TO(A4BTM+16); Message(155+A4BNM,0); Bell(4,1);
                         Set_BV4(237); Set_ST4(870);   return; 
                       }
         }
@@ -1073,9 +1073,9 @@ vd  far Regul_04(vd){
         Set_KR4(1,STOP,STOP,STOP);
         Set_KR4(2,STOP,STOP,STOP);
         // сообщение об окончании режима
-        Message(193+A4BNM);
+        Message(193+A4BNM,0);
         // перевод управления автоклавом в режим "ГИДРОНАСОС"
-        Message(198+A4BNM); Set_BV4(235); Set_ST4(870); return;
+        Message(198+A4BNM,0); Set_BV4(235); Set_ST4(870); return;
     }
 //  // ----------------------------------------------------------------------
 
@@ -1100,7 +1100,7 @@ vd  far Regul_04(vd){
         }
         A4PPSTEP_V=300;
         // сообщение о начале режима
-        if(A4STEPW__V==300){ Message(200+A4BNM); }
+        if(A4STEPW__V==300){ Message(200+A4BNM,0); }
         //
         Set_ST4(311);
         // перевести регулятор конденсата в Авт режим, чтобы закрылся клапан
@@ -1111,69 +1111,69 @@ vd  far Regul_04(vd){
         Set_ST4(301);
         switch ( Check_TO(A4BTM+1, A4TZOPO__R* SEC, I4ZIOPC__V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TZOPO__R; A4STEPC__V=CNTTO[A4BTM+1]; return; }
-            case BAD: { Clear_TO(A4BTM+1); Message(141+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+1); Message(141+A4BNM,0); Bell(4,1); return; }
         }
         // задвижка впуска перепускного пара закрыта?   [x1.i03 (IxZIPPC) = 1]
         Set_ST4(302);
         switch ( Check_TO(A4BTM+2, A4TZPPO__R* SEC, I4ZIPPC__V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TZPPO__R; A4STEPC__V=CNTTO[A4BTM+2]; return; }
-            case BAD: { Clear_TO(A4BTM+2); Message(142+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+2); Message(142+A4BNM,0); Bell(4,1); return; }
         }
         // задвижка выпуска перепускного пара закрыта?  [x1.i07 (IxZOPPC) = 1]
         Set_ST4(303);
         switch ( Check_TO(A4BTM+3, A4TZPPO__R* SEC, I4ZOPPC__V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TZPPO__R; A4STEPC__V=CNTTO[A4BTM+3]; return; }
-            case BAD: { Clear_TO(A4BTM+3); Message(143+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+3); Message(143+A4BNM,0); Bell(4,1); return; }
         }
         // задвижка выпуска пара в атмосферу закрыта?   [x1.i09 (IxZOPAC) = 1]
         Set_ST4(304);
         switch ( Check_TO(A4BTM+4, A4TZSPA__R* SEC, I4ZOPAC__V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TZSPA__R; A4STEPC__V=CNTTO[A4BTM+4]; return; }
-            case BAD: { Clear_TO(A4BTM+4); Message(144+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+4); Message(144+A4BNM,0); Bell(4,1); return; }
         }
         // задвижка вакуума закрыта?                    [x2.i02 (IxVZC__) = 1]
         Set_ST4(305);
         switch ( Check_TO(A4BTM+5, A4TVZO___R* SEC, I4VZC____V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TVZO___R; A4STEPC__V=CNTTO[A4BTM+5]; return; }
-            case BAD: { Clear_TO(A4BTM+5); Message(145+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+5); Message(145+A4BNM,0); Bell(4,1); return; }
         }
         // клапан выпуска конденсата закрыт?            [x5.i07 (IxKOCC_) = 1]
         Set_ST4(306);
         switch ( Check_TO(A4BTM+6, A4RCHKF__R* SEC, I4KOCC___V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4RCHKF__R; A4STEPC__V=CNTTO[A4BTM+6]; return; }
-            case BAD: { Clear_TO(A4BTM+6); Message(146+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+6); Message(146+A4BNM,0); Bell(4,1); return; }
         }
         // СПУ заблокированы?                           [x7.i08 (IxSBP1Z) = 1]
         //                                              [x8.i08 (IxSBP2Z) = 1]
         Set_ST4(307);
         switch ( Check_TO(A4BTM+7,5*60*SEC,I4SBP1Z__V,'=',ON, 1)){
             case RUN: { A4STEPZ__V=60*5; A4STEPC__V=CNTTO[A4BTM+7]; return; }
-            case BAD: { Clear_TO(A4BTM+7); Message(148+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+7); Message(148+A4BNM,0); Bell(4,1); return; }
         }
         // нет давления в автоклаве?                    [x7.i07 (IxP1_N_) = 1]
         //                                              [x8.i07 (IxP1_N_) = 1]
         Set_ST4(308);
         switch ( Check_TO(A4BTM+8, 60*SEC,I4P1_N___V,'=',ON, 1)){
             case RUN: { A4STEPZ__V=60*1; A4STEPC__V=CNTTO[A4BTM+8]; return; }
-            case BAD: { Clear_TO(A4BTM+8); Message(156+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+8); Message(156+A4BNM,0); Bell(4,1); return; }
         }
         // наличие напряжения на щите впуска пара       [x2.i00 (IxVAC__) = 1]
         Set_ST4(309);
         switch ( Check_TO(A4BTM+9, 60*SEC, I4VAC____V,'=',ON, 1)){
             case RUN: { A4STEPZ__V=60*1; A4STEPC__V=CNTTO[A4BTM+9]; return; }
-            case BAD: { Clear_TO(A4BTM+9); Message(147+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+9); Message(147+A4BNM,0); Bell(4,1); return; }
         }
         // дистанционный режим работы вакуумнасоса      [x2.i08 (IxVNMD_) = 1]
         Set_ST4(310);
         switch ( Check_TO(A4BTM+10, 60*SEC, I4VNMD___V,'=',ON, 1)){
             case RUN: { A4STEPZ__V=60*1; A4STEPC__V=CNTTO[A4BTM+10]; return; }
-            case BAD: { Clear_TO(A4BTM+10); Message(162+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+10); Message(162+A4BNM,0); Bell(4,1); return; }
         }
         // дистанционный режим работы задвижки          [x2.i07 (IxVZMD_) = 1]
         Set_ST4(311);
         switch ( Check_TO(A4BTM+11, 60*SEC, I4VZMD___V,'=',ON, 1)){
             case RUN: { A4STEPZ__V=60*1; A4STEPC__V=CNTTO[A4BTM+11]; return; }
-            case BAD: { Clear_TO(A4BTM+11); Message(182+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+11); Message(182+A4BNM,0); Bell(4,1); return; }
         }
         Clear_TO(A4BTM+1); Clear_TO(A4BTM+2); Clear_TO(A4BTM+3);
         Clear_TO(A4BTM+4); Clear_TO(A4BTM+5); Clear_TO(A4BTM+6);
@@ -1196,7 +1196,7 @@ vd  far Regul_04(vd){
         Set_ST4(321);
         switch ( Check_TO(A4BTM+1, A4TVZO___R* SEC, I4VZO____V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TVZO___R; A4STEPC__V=CNTTO[A4BTM+1]; return; }
-            case BAD: { Clear_TO(A4BTM+1); Message(163+A4BNM); return; }
+            case BAD: { Clear_TO(A4BTM+1); Message(163+A4BNM,0); return; }
         }
         // снять команду на открытие вакуумной задвижки [x4.o02 (OxVZO__) = 0]
         //      ZIOP ZIPP ZOPP ZOPA  VZ   KIP  KOP  KOC
@@ -1209,7 +1209,7 @@ vd  far Regul_04(vd){
         // вакуумный насос включен?                     [x2.i05 (IxVN_1_) = 1]
         switch ( Check_TO(A4BTM+2, 60*SEC, I4VN_1___V,'=',ON, 1)){
             case RUN: { A4STEPZ__V=60*1; A4STEPC__V=CNTTO[A4BTM+2]; return; }
-            case BAD: { Clear_TO(A4BTM+2); Message(164+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+2); Message(164+A4BNM,0); Bell(4,1); return; }
         }
         // проверка канала максимального разрежения с   [x2.i06 (IxMAXV_) = 1]
         // эл.контактного манометра
@@ -1227,7 +1227,7 @@ vd  far Regul_04(vd){
         Set_ST4(323);
         switch ( Check_TO(A4BTM+3, A4TVACUM_R* SEC, AIP34V___V,'<',A4RAZVK__R, 3)){
             case RUN: { A4STEPZ__V=A4TVACUM_R; A4STEPC__V=CNTTO[A4BTM+3]; return; }
-            case BAD: { Message(165+A4BNM); break; }
+            case BAD: { Message(165+A4BNM,0); break; }
         }
         // дать комманду на закрытие вакуумной задвижки [x4.o03 (OxVZC__) = 1]
         //      ZIOP ZIPP ZOPP ZOPA  VZ   KIP  KOP  KOC
@@ -1248,7 +1248,7 @@ vd  far Regul_04(vd){
         Set_ST4(326);
         switch ( Check_TO(A4BTM+1, A4TVZO___R* SEC, I4VZC____V,'=',ON, 1)){
             case RUN: { A4STEPZ__V=A4TVZO___R; A4STEPC__V=CNTTO[A4BTM+1]; return; }
-            case BAD: { Clear_TO(A4BTM+1); Message(166+A4BNM); return; }
+            case BAD: { Clear_TO(A4BTM+1); Message(166+A4BNM,0); return; }
         }
         // ждать некоторое время перед включением следующего исполнителя
         Set_ST4(327);
@@ -1263,14 +1263,14 @@ vd  far Regul_04(vd){
         // вакуумный насос выключен?                    [x2.i05 (IxVN_1_) = 0]
         switch ( Check_TO(A4BTM+4,  120*SEC, I4VN_1___V,'=',OFF, 1)){
             case RUN: { A4STEPZ__V=120; A4STEPC__V=CNTTO[A4BTM+4]; return; }
-            case BAD: { Clear_TO(A4BTM+4); Message(167+A4BNM); return; }
+            case BAD: { Clear_TO(A4BTM+4); Message(167+A4BNM,0); return; }
         }
         //
         Clear_TO(A4BTM+1); Clear_TO(A4BTM+2); 
         Clear_TO(A4BTM+3); Clear_TO(A4BTM+4);
         A4STEPZ__V=0; A4STEPC__V=0;
         // сообщение об окончании режима
-        Message(190+A4BNM); Set_ST4(330);
+        Message(190+A4BNM,0); Set_ST4(330);
         return;
     }
 //  // ----------------------
@@ -1302,7 +1302,7 @@ vd  far Regul_04(vd){
         A4PPSTEP_V=400;
         // сообщение о начале режима
         if(A4STEPW__V==400){ 
-           Message(201+A4BNM); 
+           Message(201+A4BNM,0); 
            A4RPRA___M=OFF; A4RPUU1__M=RMINUS; Set_ST4(401); return; 
         }
         //
@@ -1313,56 +1313,56 @@ vd  far Regul_04(vd){
         Set_ST4(401);
         switch ( Check_TO(A4BTM+1, A4TZOPO__R* SEC, I4ZIOPC__V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TZOPO__R; A4STEPC__V=CNTTO[A4BTM+1]; return; }
-            case BAD: { Clear_TO(A4BTM+1); Message(141+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+1); Message(141+A4BNM,0); Bell(4,1); return; }
         }
         // задвижка впуска перепускного пара закрыта?   [x1.i03 (IxZIPPC) = 1]
         Set_ST4(402);
         switch ( Check_TO(A4BTM+2, A4TZPPO__R* SEC, I4ZIPPC__V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TZPPO__R; A4STEPC__V=CNTTO[A4BTM+2]; return; }
-            case BAD: { Clear_TO(A4BTM+2); Message(142+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+2); Message(142+A4BNM,0); Bell(4,1); return; }
         }
         // задвижка выпуска перепускного пара закрыта?  [x1.i07 (IxZOPPC) = 1]
         Set_ST4(403);
         switch ( Check_TO(A4BTM+3, A4TZPPO__R* SEC, I4ZOPPC__V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TZPPO__R; A4STEPC__V=CNTTO[A4BTM+3]; return; }
-            case BAD: { Clear_TO(A4BTM+3); Message(143+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+3); Message(143+A4BNM,0); Bell(4,1); return; }
         }
         // задвижка выпуска пара в атмосферу закрыта?   [x1.i09 (IxZOPAC) = 1]
         Set_ST4(404);
         switch ( Check_TO(A4BTM+4, A4TZSPA__R* SEC, I4ZOPAC__V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TZSPA__R; A4STEPC__V=CNTTO[A4BTM+4]; return; }
-            case BAD: { Clear_TO(A4BTM+4); Message(144+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+4); Message(144+A4BNM,0); Bell(4,1); return; }
         }
         // задвижка вакуума закрыта?                    [x2.i02 (IxVZC__) = 1]
         Set_ST4(405);
         switch ( Check_TO(A4BTM+5, A4TVZO___R* SEC, I4VZC____V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TVZO___R; A4STEPC__V=CNTTO[A4BTM+5]; return; }
-            case BAD: { Clear_TO(A4BTM+5); Message(145+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+5); Message(145+A4BNM,0); Bell(4,1); return; }
         }
         // клапан впуска пара закрыт?
         Set_ST4(406);
         switch ( Check_TO(A4BTM+6, A4RPHKF__R* SEC, I4KIPC___V,'=',ON,1)){
             case RUN: { A4STEPZ__V=A4RPHKF__R; A4STEPC__V=CNTTO[A4BTM+6]; return; }
-            case BAD: { Clear_TO(A4BTM+6); Message(128+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+6); Message(128+A4BNM,0); Bell(4,1); return; }
         }
         // СБУ заблокированы?                           [x7.i08 (IxSBP1Z) = 1]
         //                                              [x8.i08 (IxSBP2Z) = 1]
         Set_ST4(407);
         switch ( Check_TO(A4BTM+7,5*60*SEC,I4SBP1Z__V,'=',ON, 1)){
             case RUN: { A4STEPZ__V=60*5; A4STEPC__V=CNTTO[A4BTM+7]; return; }
-            case BAD: { Clear_TO(A4BTM+7); Message(148+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+7); Message(148+A4BNM,0); Bell(4,1); return; }
         }
         // наличие напряжения на щите впуска пара       [x2.i00 (IxVAC__) = 1]
         Set_ST4(409);
         switch ( Check_TO(A4BTM+9, 60*SEC, I4VAC____V,'=',ON, 1)){
             case RUN: { A4STEPZ__V=60*1; A4STEPC__V=CNTTO[A4BTM+9]; return; }
-            case BAD: { Clear_TO(A4BTM+9); Message(147+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+9); Message(147+A4BNM,0); Bell(4,1); return; }
         }
         // режим управления автоклавом "Дистанция"?     [x1.i13 (IxDU___) = 1]
         Set_ST4(410);
         switch ( Check_TO(A4BTM+10, 60*SEC, I4VAC____V,'=',ON, 1)){
             case RUN: { A4STEPZ__V=60*1; A4STEPC__V=CNTTO[A4BTM+10]; return; }
-            case BAD: { Clear_TO(A4BTM+10); Message(159+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+10); Message(159+A4BNM,0); Bell(4,1); return; }
         }
         Clear_TO(A4BTM+1); Clear_TO(A4BTM+2); Clear_TO(A4BTM+3); 
         Clear_TO(A4BTM+4); Clear_TO(A4BTM+5); Clear_TO(A4BTM+6); 
@@ -1404,7 +1404,7 @@ vd  far Regul_04(vd){
         Set_ST4(423);
         switch ( Check_TO(A4BTM+1, A4TZPPO__R* SEC, I4ZIPPO__V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TZPPO__R; A4STEPC__V=CNTTO[A4BTM+1]; return; }
-            case BAD: { Clear_TO(A4BTM+1); Message(161+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+1); Message(161+A4BNM,0); Bell(4,1); return; }
         }
         // задержка 10 сек перед снятием комманды с задвижки пер.пара
         switch (Check_TO (A4BTM+2, 10* SEC, ZERO,'=',ON,1)){
@@ -1446,7 +1446,7 @@ vd  far Regul_04(vd){
         Set_ST4(431);
         switch ( Check_TO(A4BTM+1, A4TZOPO__R* SEC, I4ZIOPO__V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TZOPO__R; A4STEPC__V=CNTTO[A4BTM+1]; return; }
-            case BAD: { Clear_TO(A4BTM+1); Message(171+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+1); Message(171+A4BNM,0); Bell(4,1); return; }
         }
         // задержка 10 сек перед снятием комманды с задвижки острого пара
         switch (Check_TO (A4BTM+2, 10* SEC, ZERO,'=',ON,1)){
@@ -1628,12 +1628,12 @@ vd  far Regul_04(vd){
         // задвижка впуска магистральн пара закрыта?    [x1.i01 (IxZIOPC) = 1]
         switch ( Check_TO(A4BTM+1, A4TZOPO__R* SEC, I4ZIOPC__V,'=',ON,1)){
             case RUN: { A4STEPZ__V=A4TZOPO__R; A4STEPC__V=CNTTO[A4BTM+1]; return; }
-            case BAD: { Clear_TO(A4BTM+1); Message(141+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+1); Message(141+A4BNM,0); Bell(4,1); return; }
         }
         // клапан впуска пара закрыт?
         switch ( Check_TO(A4BTM+2, A4RPHKF__R* SEC, I4KIPC___V,'=',ON,1)){
             case RUN: { A4STEPZ__V=A4RPHKF__R; A4STEPC__V=CNTTO[A4BTM+2]; return; }
-            case BAD: { Clear_TO(A4BTM+2); Message(128+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+2); Message(128+A4BNM,0); Bell(4,1); return; }
         }
         // обнуление таймеров и счетчиков
         Clear_TO(A4BTM+1); Clear_TO(A4BTM+2);
@@ -1641,7 +1641,7 @@ vd  far Regul_04(vd){
         Set_BV4(440); Set_ST4(500);
         A4PPP___YM=OFF;  A4PPP___YV=A4PPP___YM;
         // сообщение об окончании режима
-        Message(202+A4BNM);
+        Message(202+A4BNM,0);
         return;
     }
 //  // ----------------------
@@ -1669,12 +1669,12 @@ vd  far Regul_04(vd){
         // задвижка впуска перепускного пара закрыта?
         switch ( Check_TO(A4BTM+1, A4TZPPO__R* SEC, I4ZIPPC__V,'=',ON,1)){
             case RUN: { A4STEPZ__V=A4TZPPO__R; A4STEPC__V=CNTTO[A4BTM+1]; return; }
-            case BAD: { Clear_TO(A4BTM+1); Message(142+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+1); Message(142+A4BNM,0); Bell(4,1); return; }
         }
         // клапан впуска пара закрыт?
         switch ( Check_TO(A4BTM+2, A4RPHKF__R* SEC, I4KIPC___V,'=',ON,1)){
             case RUN: { A4STEPZ__V=A4RPHKF__R; A4STEPC__V=CNTTO[A4BTM+2]; return; }
-            case BAD: { Clear_TO(A4BTM+2); Message(128+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+2); Message(128+A4BNM,0); Bell(4,1); return; }
         }
         // при закрытии всех  исполнителей перепускного пара, возвращаемся
         // на формирование задания расхода пара регулятора НАБОРА ДАВЛЕНИЯ
@@ -1702,7 +1702,7 @@ vd  far Regul_04(vd){
         if(A4PVID__YV==OFF){ Set_BV4(500); Set_ST4(600); return; }
         A4PPSTEP_V=500;
         // сообщение о начале режима
-        if(A4STEPW__V==500){ Message(203+A4BNM); }
+        if(A4STEPW__V==500){ Message(203+A4BNM,0); }
         // выдержка автоклава под давлением проводится магистральным паром
         //      ZIOP ZIPP ZOPP ZOPA  VZ   KIP  KOP  KOC
         Set_IS4( OFF, OFF, OFF, OFF, OFF, OFF, OFF,ASIS);
@@ -1710,37 +1710,37 @@ vd  far Regul_04(vd){
         // задвижка впуска магистральн пара закрыта?    [x1.i01 (IxZIOPC) = 1]
         switch ( Check_TO(A4BTM+1, A4TZOPO__R* SEC, I4ZIOPC__V,'=',ON,1)){
             case RUN: { A4STEPZ__V=A4TZOPO__R; A4STEPC__V=CNTTO[A4BTM+1]; return; }
-            case BAD: { Clear_TO(A4BTM+1); Message(141+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+1); Message(141+A4BNM,0); Bell(4,1); return; }
         }
         Set_ST4(512);
         // клапан впуска пара закрыт?                   [x1.i05 (IxKIPC_) = 1]
         switch ( Check_TO(A4BTM+2, A4RPHKF__R, I4KIPC___V,'=',ON,1)){
             case RUN: { A4STEPZ__V=A4RPHKF__R; A4STEPC__V=CNTTO[A4BTM+2]; return; }
-            case BAD: { Clear_TO(A4BTM+2); Message(169+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+2); Message(169+A4BNM,0); Bell(4,1); return; }
         }
         Set_ST4(513);
         // задвижка выпуска перепускного пара закрыта?  [x1.i07 (IxZOPPC) = 1]
         switch ( Check_TO(A4BTM+3, A4TZPPO__R* SEC, I4ZOPPC__V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TZPPO__R; A4STEPC__V=CNTTO[A4BTM+3]; return; }
-            case BAD: { Clear_TO(A4BTM+3); Message(143+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+3); Message(143+A4BNM,0); Bell(4,1); return; }
         }
         Set_ST4(514);
         // задвижка выпуска пара в атмосферу закрыта?   [x1.i09 (IxZOPAC) = 1]
         switch ( Check_TO(A4BTM+4, A4TZSPA__R* SEC, I4ZOPAC__V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TZSPA__R; A4STEPC__V=CNTTO[A4BTM+4]; return; }
-            case BAD: { Clear_TO(A4BTM+4); Message(144+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+4); Message(144+A4BNM,0); Bell(4,1); return; }
         }
         Set_ST4(515);
         // задвижка вакуума закрыта?                    [x2.i02 (IxVZC__) = 1]
         switch ( Check_TO(A4BTM+5, A4TVZO___R* SEC, I4VZC____V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TVZO___R; A4STEPC__V=CNTTO[A4BTM+5]; return; }
-            case BAD: { Clear_TO(A4BTM+5); Message(145+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+5); Message(145+A4BNM,0); Bell(4,1); return; }
         }
         Set_ST4(516);
         // задвижка впуска перепускного пара закрыта?   [x1.i03 (IxZIPPC) = 1]
         switch ( Check_TO(A4BTM+6, A4TZPPO__R* SEC, I4ZIPPC__V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TZPPO__R; A4STEPC__V=CNTTO[A4BTM+6]; return; }
-            case BAD: { Clear_TO(A4BTM+6); Message(142+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+6); Message(142+A4BNM,0); Bell(4,1); return; }
         }
         // обнуление таймеров и счетчиков
         Clear_TO(A4BTM+1); Clear_TO(A4BTM+2); Clear_TO(A4BTM+3);
@@ -1796,7 +1796,7 @@ vd  far Regul_04(vd){
         // задвижка впуска магистральн пара открыта?    [x1.i00 (IxZIOPO) = 1]
         switch ( Check_TO(A4BTM+1, A4TZOPO__R* SEC, I4ZIOPO__V,'=',ON,1)){
             case RUN: { A4STEPZ__V=A4TZOPO__R; A4STEPC__V=CNTTO[A4BTM+1]; return; }
-            case BAD: { Clear_TO(A4BTM+1); Message(171+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+1); Message(171+A4BNM,0); Bell(4,1); return; }
         }
         //-----------
         // снять  команду с  задвижки впуска  острого пара  и
@@ -1870,7 +1870,7 @@ vd  far Regul_04(vd){
           // задвижка впуска острого пара закрыта?      [x1.i01 (IxZIOPC) = 1]
           switch ( Check_TO(A4BTM+5, A4TZOPO__R* SEC, I4ZIOPC__V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TZOPO__R; A4STEPC__V=CNTTO[A4BTM+5]; return; }
-            case BAD: { Clear_TO(A4BTM+5); Message(141+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+5); Message(141+A4BNM,0); Bell(4,1); return; }
           }
         }
         // дать команду на закрытие клапана впуска пара
@@ -1880,7 +1880,7 @@ vd  far Regul_04(vd){
         // клапан впуска пара закрыт?            
         switch ( Check_TO(A4BTM+4, A4RPHKF__R* SEC, I4KIPC___V,'=',ON,  1 )){
             case RUN: { A4STEPZ__V=A4RPHKF__R; A4STEPC__V=CNTTO[A4BTM+4]; return; }
-            case BAD: { Clear_TO(A4BTM+4); Message(170+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+4); Message(170+A4BNM,0); Bell(4,1); return; }
         }
         // если был установлен флаг выхода- перейти на режим "СБРОС ДАВЛЕНИЯ"
         if(A4FLAG==2){ 
@@ -1889,7 +1889,7 @@ vd  far Regul_04(vd){
            Set_BV4(502); Set_ST4(600);
            A4PVID__YM=OFF;  A4PVID__YV=A4PVID__YM;
            // сообщение об окончании режима
-           Message(204+A4BNM);
+           Message(204+A4BNM,0);
         }
         return;
     }
@@ -1911,11 +1911,11 @@ vd  far Regul_04(vd){
         // (на СБРОСЕ ДАВЛЕНИЯ может находится ТОЛЬКО один автоклав)
         if(A1PPSTEP_V==600||A2PPSTEP_V==600||A3PPSTEP_V==600||
            A5PPSTEP_V==600||A6PPSTEP_V==600){
-           Set_BV4(600); Set_ST4(50); Message(110+A4BNM); return; 
+           Set_BV4(600); Set_ST4(50); Message(110+A4BNM,0); return; 
         }
         A4PPSTEP_V=600;
         // сообщение о начале режима
-        if(A4STEPW__V==600){ Message(205+A4BNM); }
+        if(A4STEPW__V==600){ Message(205+A4BNM,0); }
         //
         A4RPRA___M=ON;
         //-----------
@@ -1938,31 +1938,31 @@ vd  far Regul_04(vd){
         // задвижка впуска магистральн пара закрыта?    [x1.i01 (IxZIOPC) = 1]
         switch ( Check_TO(A4BTM+1, A4TZOPO__R* SEC, I4ZIOPC__V,'=',ON,1)){
             case RUN: { A4STEPZ__V=A4TZOPO__R; A4STEPC__V=CNTTO[A4BTM+1]; return; }
-            case BAD: { Clear_TO(A4BTM+1); Message(141+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+1); Message(141+A4BNM,0); Bell(4,1); return; }
         }
         Set_ST4(613);
         // задвижка выпуска перепускного пара закрыта?  [x1.i07 (IxZOPPC) = 1]
         switch ( Check_TO(A4BTM+3, A4TZPPO__R* SEC, I4ZOPPC__V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TZPPO__R; A4STEPC__V=CNTTO[A4BTM+3]; return; }
-            case BAD: { Clear_TO(A4BTM+3); Message(143+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+3); Message(143+A4BNM,0); Bell(4,1); return; }
         }
         Set_ST4(615);
         // задвижка вакуума закрыта?                    [x2.i02 (IxVZC__) = 1]
         switch ( Check_TO(A4BTM+5, A4TVZO___R* SEC, I4VZC____V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TVZO___R; A4STEPC__V=CNTTO[A4BTM+5]; return; }
-            case BAD: { Clear_TO(A4BTM+5); Message(145+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+5); Message(145+A4BNM,0); Bell(4,1); return; }
         }
         Set_ST4(616);
         // задвижка впуска перепускного пара закрыта?   [x1.i03 (IxZIPPC) = 1]
         switch ( Check_TO(A4BTM+6, A4TZPPO__R* SEC, I4ZIPPC__V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TZPPO__R; A4STEPC__V=CNTTO[A4BTM+6]; return; }
-            case BAD: { Clear_TO(A4BTM+6); Message(142+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+6); Message(142+A4BNM,0); Bell(4,1); return; }
         }
         Set_ST4(617);
         // СБУ заблокирован?                            [x7.i08 (IxSBP1Z) = 1]
         switch ( Check_TO(A4BTM+7,5*60*SEC,I4SBP1Z__V,'=',ON, 1)){
             case RUN: { A4STEPZ__V=60*5; A4STEPC__V=CNTTO[A4BTM+7]; return; }
-            case BAD: { Clear_TO(A4BTM+7); Message(148+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+7); Message(148+A4BNM,0); Bell(4,1); return; }
         }
         Set_ST4(618);
         // если выбран сброс в атмосферу- открыть задвижку сброса пара в 
@@ -1974,7 +1974,7 @@ vd  far Regul_04(vd){
           Set_IS4( OFF, OFF, OFF,  ON, OFF, OFF, OFF,ASIS);
           switch ( Check_TO(A4BTM+8, A4TZSPA__R* SEC, I4ZOPAO__V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TZSPA__R; A4STEPC__V=CNTTO[A4BTM+8]; return; }
-            case BAD: { Clear_TO(A4BTM+8); Message(173+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+8); Message(173+A4BNM,0); Bell(4,1); return; }
           }
         }
         Clear_TO(A4BTM+1);  Clear_TO(A4BTM+2);  Clear_TO(A4BTM+3);  
@@ -2098,19 +2098,19 @@ vd  far Regul_04(vd){
         // проверка закрытия задвижки сброса пара в атмосферу
         switch ( Check_TO(A4BTM+1, A4TZSPA__R* SEC, I4ZOPAC__V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TZSPA__R; A4STEPC__V=CNTTO[A4BTM+1]; return; }
-            case BAD: { Clear_TO(A4BTM+1); Message(144+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+1); Message(144+A4BNM,0); Bell(4,1); return; }
         }
         // проверка закрытия клапана выпуска пара
         switch ( Check_TO(A4BTM+2, A4TKLO___R* SEC, I4KOPC___V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TKLO___R; A4STEPC__V=CNTTO[A4BTM+2]; return; }
-            case BAD: { Clear_TO(A4BTM+2); Message(139+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+2); Message(139+A4BNM,0); Bell(4,1); return; }
         }
         Clear_TO(A4BTM+1); Clear_TO(A4BTM+2);
         A4STEPZ__V=0; A4STEPC__V=0;
         Set_BV4(602); Set_ST4(50);
         A4SP____YM=OFF; A4SP____YV=A4SP____YM;
         // сообщение об окончании режима
-        Message(206+A4BNM);
+        Message(206+A4BNM,0);
         return;
     }
 //  // ----------------------
@@ -2140,7 +2140,7 @@ vd  far Regul_04(vd){
         // проверка открытия задвижки выпуска перепускного пара
         switch ( Check_TO(A4BTM+1, A4TZPPO__R* SEC, I4ZOPPO__V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TZPPO__R; A4STEPC__V=CNTTO[A4BTM+1]; return; }
-            case BAD: { Clear_TO(A4BTM+1); Message(179+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+1); Message(179+A4BNM,0); Bell(4,1); return; }
         }
         // после открытия установить флаг подтверждения отрытия для АК-при
         A4PPSTEP_V=700;
@@ -2172,7 +2172,7 @@ vd  far Regul_04(vd){
         // проверка открытия клапана выпуска пара
         switch ( Check_TO(A4BTM+1, A4TKLO___R* SEC, I4KOPO___V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TKLO___R; A4STEPC__V=CNTTO[A4BTM+1]; return; }
-            case BAD: { Clear_TO(A4BTM+1); Message(181+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+1); Message(181+A4BNM,0); Bell(4,1); return; }
         }
         // после открытия установить флаг подтверждения отрытия для АК-при
         A4PPSTEP_V=704;
@@ -2202,12 +2202,12 @@ vd  far Regul_04(vd){
         // проверка закрытия задвижки выпуска перепускного пара
         switch ( Check_TO(A4BTM+1, A4TZPPO__R* SEC, I4ZOPPC__V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TZPPO__R; A4STEPC__V=CNTTO[A4BTM+1]; return; }
-            case BAD: { Clear_TO(A4BTM+1); Message(143+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+1); Message(143+A4BNM,0); Bell(4,1); return; }
         }
         // закрыть клапан выпуска пара
         switch ( Check_TO(A4BTM+2, A4TKLO___R* SEC, I4KOPC___V,'=',ON, 1 )){
             case RUN: { A4STEPZ__V=A4TKLO___R; A4STEPC__V=CNTTO[A4BTM+2]; return; }
-            case BAD: { Clear_TO(A4BTM+2); Message(139+A4BNM); Bell(4,1); return; }
+            case BAD: { Clear_TO(A4BTM+2); Message(139+A4BNM,0); Bell(4,1); return; }
         }
         // после закрытия установить флаг подтверждения закрытия исполнителей
         A4PPSTEP_V=705;
@@ -2221,7 +2221,7 @@ vd  far Regul_04(vd){
         if(A4IPPSTEPV<400||A4IPPSTEPV>500){ Set_ST4(50); }
         A4SP____YM=OFF; A4SP____YV=ON;
         // сообщение об окончании режима
-        Message(207+A4BNM);
+        Message(207+A4BNM,0);
         return;
     }
 //  // ----------------------------------------------------------------------

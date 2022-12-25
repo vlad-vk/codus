@@ -1,8 +1,8 @@
 MAKE Version 3.6  Copyright (c) 1992 Borland International
 
-Available memory 15728640 bytes
+Available memory 15350320 bytes
 
-        c:\prog\bc31\bin\bcc.exe -c -mh -1 -DBCC -Ic:\prog\bc31\inc -Ic:\prog\bc31\inc -Ld:\ -Lc:\prog\bc31\lib *.c 
+	d:\prog\bc31\bin\bcc.exe -c -mh -1 -DBCC -Id:\prog\bc31\inc -Id:\prog\bc31\inc -Ld:\ -Ld:\prog\bc31\lib *.c 
 Borland C++  Version 3.1 Copyright (c) 1992 Borland International
 debval.c:
 mod_ar.c:
@@ -10,10 +10,10 @@ mod_bs.c:
 setval.c:
 signal.c:
 
-        Available memory 3746452
-DEBVAL.OBJ
-MOD_AR.OBJ
-MOD_BS.OBJ
-SETVAL.OBJ
-SIGNAL.OBJ
-Скопировано файлов:         5.
+	Available memory 3741892
+ DEBVAL.OBJ
+ MOD_AR.OBJ
+ MOD_BS.OBJ
+ SETVAL.OBJ
+ SIGNAL.OBJ
+   5 File(s) copied.

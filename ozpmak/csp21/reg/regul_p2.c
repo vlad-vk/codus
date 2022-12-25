@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 // регулятор набора давления АК2
 
-#include "..\_libpath.inc"
+#include "..\prg\_libpath.inc"
 #include "..\prg\run_prgv.h"
 #include "..\prg\run_prgr.h"
 
@@ -49,9 +49,9 @@ vd  far Regul_2p(vd){
         if(A2RPRA___M==SWITCH) A2RPRA___M=(A2RPRA___V>0) then_ OFF else_ AUTO;
         A2RPRA___V =A2RPRA___M;
         if(A2RPRA___V==AUTO){ 
-           Message(122+A2BNM); A2RPUU1__M=RMINUS;
+           Message(122+A2BNM,0); A2RPUU1__M=RMINUS;
         } else { 
-           Message(123+A2BNM); A2RPMO1__M=A2RPMO1__V=WO_Skip[RN1];  
+           Message(123+A2BNM,0); A2RPMO1__M=A2RPMO1__V=WO_Skip[RN1];  
            if(A2RPUU1__P==RPLUS ) A2RPUU1__M=RMINUS;
            if(A2RPUU1__P==RMINUS) A2RPUU1__M=RPLUS;
            AMAN=1;

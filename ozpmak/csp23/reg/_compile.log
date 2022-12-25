@@ -1,8 +1,8 @@
 MAKE Version 3.6  Copyright (c) 1992 Borland International
 
-Available memory 15728640 bytes
+Available memory 15350320 bytes
 
-        c:\prog\bc31\bin\bcc.exe -c -mh -1 -DBCC -Ic:\prog\bc31\inc -Ic:\prog\bc31\inc -Ld:\ -Lc:\prog\bc31\lib -e *.c 
+	d:\prog\bc31\bin\bcc.exe -c -mh -1 -DBCC -Id:\prog\bc31\inc -Id:\prog\bc31\inc -Ld:\ -Ld:\prog\bc31\lib -e *.c 
 Borland C++  Version 3.1 Copyright (c) 1992 Borland International
 regul_00.c:
 regul_a3.c:
@@ -18,14 +18,14 @@ Warning regul_p4.c 200: 'CCMGK' is assigned a value that is never used in functi
 regul_z3.c:
 regul_z4.c:
 
-        Available memory 3359764
-REGUL_00.OBJ
-REGUL_A3.OBJ
-REGUL_A4.OBJ
-REGUL_C3.OBJ
-REGUL_C4.OBJ
-REGUL_P3.OBJ
-REGUL_P4.OBJ
-REGUL_Z3.OBJ
-REGUL_Z4.OBJ
-Скопировано файлов:         9.
+	Available memory 3354100
+ REGUL_00.OBJ
+ REGUL_A3.OBJ
+ REGUL_A4.OBJ
+ REGUL_C3.OBJ
+ REGUL_C4.OBJ
+ REGUL_P3.OBJ
+ REGUL_P4.OBJ
+ REGUL_Z3.OBJ
+ REGUL_Z4.OBJ
+   9 File(s) copied.

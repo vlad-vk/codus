@@ -35,7 +35,7 @@ vd  far UpdDataT(vd){
     //-----------------------------------------------------------------------
     // Запись данных на диск
     if (WriteDT1_M>0){
-        WriteDT1_M=0; WriteData(0); Message(20);
+        WriteDT1_M=0; WriteData(0); Message(20,0);
         printf("W");
     }
     //-----------------------------------------------------------------------
@@ -64,7 +64,7 @@ vd  far UpdDataT(vd){
        secC=TimeCSS1_M; minC=TimeCSM1_M; houC=TimeCSH1_M;
        dayC=DateCSD1_M; monC=DateCSM1_M; yeaC=DateCSY1_M;
        SetTime(houC, minC, secC);
-       SetDate(yeaC, monC, dayC); Message(12); TMDTSet1_M=0;
+       SetDate(yeaC, monC, dayC); Message(12,0); TMDTSet1_M=0;
     }
     //-----------------------------------------------------------------------
     // Передача номера текущего сообщения

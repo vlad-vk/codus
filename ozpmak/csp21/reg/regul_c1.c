@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 // регулятор конденсата АК1
 
-#include "..\_libpath.inc"
+#include "..\prg\_libpath.inc"
 #include "..\prg\run_prgv.h"
 #include "..\prg\run_prgr.h"
 
@@ -51,9 +51,9 @@ vd  far Regul_1c(vd){
         if(A1RCRA___M==SWITCH) A1RCRA___M=(A1RCRA___V>0) then_ OFF else_ AUTO;
         A1RCRA___V =A1RCRA___M;
         if(A1RCRA___V==AUTO){ 
-           Message(120+A1BNM); 
+           Message(120+A1BNM,0); 
         } else { 
-           Message(121+A1BNM); A1RCMO___M=A1RCMO___V=WO_Skip[RN1];
+           Message(121+A1BNM,0); A1RCMO___M=A1RCMO___V=WO_Skip[RN1];
            if(A1RCUU___P==RPLUS ) A1RCUU___M=RMINUS;
            if(A1RCUU___P==RMINUS) A1RCUU___M=RPLUS;
            AMAN=1;

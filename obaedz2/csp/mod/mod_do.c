@@ -1,4 +1,4 @@
-#include "..\_libpath.inc"
+#include "..\prg\_libpath.inc"
 #include "..\prg\run_prgv.h"
 
 #define   COMU1      COM1         // номер порта для работы с УСО 1-ой группы

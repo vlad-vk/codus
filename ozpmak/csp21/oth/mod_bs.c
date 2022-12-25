@@ -1,5 +1,5 @@
 //----------------------------------------------------------------------------
-#include "..\_libpath.inc"
+#include "..\prg\_libpath.inc"
 #include "..\prg\run_prgv.h"
 #include "..\prg\run_prgr.h"
 
@@ -41,7 +41,7 @@ vd  far Chk_IT(_f far   IV, _f far * IT, _f far * IW, _f far * OM,
           // если сигнала от концевика нет больше заданного времени -
           // установить флаг ошибки сработки концевика,звонок,сообщение
           } else { 
-             if(*ER<1){ *ER=1; *CT=0; Bell(AK,1); Message(MS); }
+             if(*ER<1){ *ER=1; *CT=0; Bell(AK,1); Message(MS,0); }
           }
        } else {
           // если нет команды на исполнитель- уменьшить счетчик времени

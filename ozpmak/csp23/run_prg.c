@@ -1,5 +1,5 @@
-#include "_libpath.inc"
-#include "l:\lib\pctcp\pctcpudp.h"
+#include "libpath0.inc"
+#include "..\bin\pctcpudp.h"
 
 #include "prg\run_prgv.h"
 #include "prg\run_prgl.h"

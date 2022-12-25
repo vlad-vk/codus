@@ -1,5 +1,5 @@
 vd far GetVER(vd){
-   strcpy(nVERSION,"Wed Jan 10 23:58:49 2007");
-   DateCompil=20070110;
-   TimeCompil=235949;
+   strcpy(nVERSION,"Sun Dec 25 06:40:45 2022");
+   DateCompil=20221224;
+   TimeCompil=64145;
 }
