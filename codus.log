@@ -1,12 +1,12 @@
 
-D: Time start programm CODUS: 25.12.2022  01:28:10 
+D: Time start programm CODUS: 26.12.2022  00:05:43 
 D: Version 14.0910 GW
 Create flag file.
 D: System initialization...
 D: Ok!
 Clear database array.
 D: Reading configure & system files...
-2022.12.25 01:28:10 D: Defined user command file name: [obaedz2/codus.cmd].
+2022.12.26 00:05:43 D: Defined user command file name: [ozpmak/codus.cmd].
 Read config file.
 COMStat: Disable.
 NBWStat: Enable. 
@@ -28,15 +28,11 @@ Init and start timers.
 Create thread COM port exchange.
 Create thread NetBIOS exchange.
 Start: Public cycle...
-D: ERROR create database [obaedz2/arc/20221225.dba].
-D: ERROR create database report [obaedz2/arc/20221225.dbr][R=-23].
-D: ERROR create database [obaedz2/arc/20221225.dba].
-D: ERROR create database report [obaedz2/arc/20221225.dbr][R=-23].
 D: Begin function Mexit. Release memory graphics occupied.
 D: Write flag end programm.
 D: Close current database files.
 D: Write archive buffers.
 D: Close database archive & report.
 D: Stop network interfaces.
-D: Time exit from programm CODUS: 25.12.2022  01:28:29 
+D: Time exit from programm CODUS: 26.12.2022  00:06:05 
 
