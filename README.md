@@ -17,7 +17,7 @@ My projects of automation of industrial sections of factories:
         - CODUS data file                    <br>
         - CODUS data file                    <br>
         - switch projects text file          <br>
-        - Project Execution file (HMI CODUS) <br>
+        - Project Execution win32 file (HMI CODUS) <br>
 </td></tr>
 </table>
   
