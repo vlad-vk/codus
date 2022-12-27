@@ -1,6 +1,6 @@
 <p>
-Examples of my projects for the automation of industrial sections of factories:
-</p>
+Examples of my projects for the automation of industrial sections of factories.
+</p><br>
 
 <table>
 <tr><td> kamst   </td><td> - Saturation site of a sugar factory.            </td></tr>
