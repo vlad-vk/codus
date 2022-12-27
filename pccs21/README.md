@@ -1,4 +1,6 @@
-PCCS - PC controller station.
+<p>
+PCCS - PC controller station (PC PLC)
+</p><br>
 
 <table>
 <tr><td> pccs21.img </td>

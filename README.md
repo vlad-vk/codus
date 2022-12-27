@@ -22,4 +22,3 @@ Examples of my projects for the automation of industrial sections of factories.
         - Project Execution win32 file (HMI CODUS) <br>
 </td></tr>
 </table>
-  
