@@ -1,5 +1,5 @@
 <p>
-My projects of automation of industrial sections of factories:
+Examples of my projects for the automation of industrial sections of factories:
 </p>
 
 <table>
