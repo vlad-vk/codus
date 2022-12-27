@@ -36,3 +36,43 @@ D: Close database archive & report.
 D: Stop network interfaces.
 D: Time exit from programm CODUS: 26.12.2022  00:06:05 
 
+
+D: Time start programm CODUS: 27.12.2022  20:50:58 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.27 20:50:59 D: Defined user command file name: [ozpmak/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+00 WinSOCKET initialization.
+TCPStat: Enable. 
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+00 WinSOCKET closed.
+D: Close current database files.
+D: Write archive buffers.
+D: Close database archive & report.
+D: Stop network interfaces.
+D: Time exit from programm CODUS: 27.12.2022  20:51:43 
+

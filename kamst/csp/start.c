@@ -112,7 +112,7 @@ vd  far Start(vd){
     // дата и время компиляции
     rpDC=DateCompil; rpTC=TimeCompil;
     // вывод информации о программе
-    sprintf(pVERSION,"Kamenka sugar plant. [Compiled: %s]\n\r",nVERSION);
+    sprintf(pVERSION,"Kam***a sugar plant. [Compiled: %s]\n\r",nVERSION);
     Print  ("%s",pVERSION);
     // обнуление первых десяти переменных
     for(a=0;a<10;a++){ DBB[a]=0; }
