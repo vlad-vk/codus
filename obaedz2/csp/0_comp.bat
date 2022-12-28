@@ -18,6 +18,7 @@ tlink  @makefile.lnk >> 0_comp.log
 if exist  *.map del    *.map >> 0_comp.log
 
 rem pause
+
 if exist 0_comp.log ..\bin\readme 0_comp.log
 
 :if exist %file%.exe ..\bin\pklite %file%.exe

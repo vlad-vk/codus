@@ -166,7 +166,7 @@ vd  far Start(vd){
     // дата и время компиляции
     rpDC=DateCMP3_V; rpTC=TimeCMP3_V;
     // вывод информации о программе
-    sprintf(pVERSION,"Obukhov honeycomb concrete plant. Autoclaves N3,4. [%s]\n\r",nVERSION);
+    sprintf(pVERSION,"Program for honeycomb concrete plant. Autoclaves N3,4. [%s]\n\r",nVERSION);
     Print  ("%s",pVERSION);
     // обнуление первых десяти переменных
     for(a=0;a<10;a++){ DBB[a]=0; }
