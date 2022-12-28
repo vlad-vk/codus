@@ -7,7 +7,7 @@ PCCS - PC controller station (PC PLC)
 <td> - DOS boot disk image for PC compatible controllers (PC PLC)
        such as PC104, MicroPC, SBC, EBX and others. </td></tr>
 
-<tr><td> pccs21_0*  </td><td> - Screenshots... </td></tr>
+<tr><td> pccs21_0*  </td><td> - Screenshots. Virt-Manager (QEMU/KVM) window on the left side, remote access client window on the right side. </td></tr>
 </table>
 
 This image is based on MSDOS 6.22 (any other is possible). Disk size 4 Mb.  <br>
