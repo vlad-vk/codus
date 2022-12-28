@@ -1,8 +1,8 @@
-~001^015 ЭКРАН: ~004СИСТЕМА
+~001^015 SCREEN: ~004SYSTEM
 ~000
-~000На экране СИСТЕМА выводятся значения переменных контроллера.
-~000Эта информация нужна для наладки программы контроллера.
-~000На этом экране оператор только смотрит тренд (график)  состояния  сети.
-~000Если на тренде будет рисоваться прямая линия - это сигнализирует о том,
-~000что сеть не работает или работает слишком медленно.
-
+~000 The SYSTEM screen displays the values u200bu200bof the controller variables.
+~000 This information is needed to set up the controller program.
+~000 On this screen, the operator only looks at the trend (graph) of the network status.
+~000 If a straight line is drawn on the trend, this indicates that
+~000 that the network is down or too slow.
+~000

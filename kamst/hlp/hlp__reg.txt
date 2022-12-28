@@ -1,7 +1,7 @@
-~001^015 ЭКРАН: ~004РЕГУЛЯТОРЫ~000
+~001^015 SCREEN: ~004REGULATORS~000
 ~000
-~000 На данном экране отображается меню (полоски) выбора регуляторов.
-~000 Переход по пунктам меню осуществляется нажатием клавиш стрелочек на клавиатуре.
-~000 Остановившись на нужном регуляторе, надо нажать клавишу ENTER  для перехода на
-~000 выбранный регулятор.
+~000 This screen displays the knob selection menu (bars).
+~000 Navigate through the menu items by pressing the arrow keys on the keyboard.
+~000 Having settled on the desired controller, you must press the ENTER key to
+~000 go to selected controller.
 ~000 

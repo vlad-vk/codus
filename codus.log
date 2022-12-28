@@ -76,3 +76,865 @@ D: Close database archive & report.
 D: Stop network interfaces.
 D: Time exit from programm CODUS: 27.12.2022  20:51:43 
 
+
+D: Time start programm CODUS: 28.12.2022  15:15:03 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.28 15:15:03 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+D: Close database archive & report.
+D: Stop network interfaces.
+D: Time exit from programm CODUS: 28.12.2022  15:16:20 
+
+
+D: Time start programm CODUS: 28.12.2022  15:16:24 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.28 15:16:25 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+D: Close database archive & report.
+D: Stop network interfaces.
+D: Time exit from programm CODUS: 28.12.2022  15:17:34 
+
+
+D: Time start programm CODUS: 28.12.2022  15:22:49 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.28 15:22:49 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+D: Close database archive & report.
+D: Stop network interfaces.
+D: Time exit from programm CODUS: 28.12.2022  15:23:14 
+
+
+D: Time start programm CODUS: 28.12.2022  15:27:09 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.28 15:27:09 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+D: Close database archive & report.
+D: Stop network interfaces.
+D: Time exit from programm CODUS: 28.12.2022  15:28:25 
+
+
+D: Time start programm CODUS: 28.12.2022  16:11:45 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.28 16:11:45 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+D: Close database archive & report.
+D: Stop network interfaces.
+D: Time exit from programm CODUS: 28.12.2022  16:12:50 
+
+
+D: Time start programm CODUS: 28.12.2022  21:04:01 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.28 21:04:01 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+
+D: Time start programm CODUS: 28.12.2022  21:07:58 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.28 21:07:58 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+D: Close database archive & report.
+D: Stop network interfaces.
+D: Time exit from programm CODUS: 28.12.2022  21:08:24 
+
+
+D: Time start programm CODUS: 28.12.2022  21:12:20 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.28 21:12:20 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+D: Close database archive & report.
+D: Stop network interfaces.
+D: Time exit from programm CODUS: 28.12.2022  21:14:08 
+
+
+D: Time start programm CODUS: 28.12.2022  21:17:54 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.28 21:17:54 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+
+D: Time start programm CODUS: 28.12.2022  21:23:07 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+
+D: Time start programm CODUS: 28.12.2022  21:23:28 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.28 21:23:29 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+D: Close database archive & report.
+
+D: Time start programm CODUS: 28.12.2022  21:30:33 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.28 21:30:33 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+D: Close database archive & report.
+D: Stop network interfaces.
+D: Time exit from programm CODUS: 28.12.2022  21:31:09 
+
+
+D: Time start programm CODUS: 28.12.2022  21:58:55 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.28 21:58:55 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+
+D: Time start programm CODUS: 28.12.2022  22:01:22 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.28 22:01:22 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+D: Close database archive & report.
+D: Stop network interfaces.
+D: Time exit from programm CODUS: 28.12.2022  22:02:28 
+
+
+D: Time start programm CODUS: 28.12.2022  22:03:13 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.28 22:03:13 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Error load file [kamst/pic/shema_02.pcx].
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+D: Close database archive & report.
+D: Stop network interfaces.
+D: Time exit from programm CODUS: 28.12.2022  22:05:29 
+
+
+D: Time start programm CODUS: 28.12.2022  22:11:11 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.28 22:11:11 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+D: Close database archive & report.
+
+D: Time start programm CODUS: 28.12.2022  22:14:30 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.28 22:14:30 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+D: Close database archive & report.
+D: Stop network interfaces.
+D: Time exit from programm CODUS: 28.12.2022  22:15:00 
+
+
+D: Time start programm CODUS: 28.12.2022  22:16:28 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.28 22:16:28 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+D: Close database archive & report.
+D: Stop network interfaces.
+D: Time exit from programm CODUS: 28.12.2022  22:17:17 
+
+
+D: Time start programm CODUS: 28.12.2022  22:20:27 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.28 22:20:27 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+D: Close database archive & report.
+D: Stop network interfaces.
+D: Time exit from programm CODUS: 28.12.2022  22:22:09 
+
+
+D: Time start programm CODUS: 28.12.2022  23:31:43 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.28 23:31:43 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+D: Close database archive & report.
+D: Stop network interfaces.
+D: Time exit from programm CODUS: 28.12.2022  23:36:46 
+
+
+D: Time start programm CODUS: 29.12.2022  00:08:07 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.29 00:08:07 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+D: Close database archive & report.
+D: Stop network interfaces.
+D: Time exit from programm CODUS: 29.12.2022  00:09:39 
+
+
+D: Time start programm CODUS: 29.12.2022  00:11:48 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.29 00:11:48 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+D: Close database archive & report.
+D: Stop network interfaces.
+D: Time exit from programm CODUS: 29.12.2022  00:12:17 
+
+
+D: Time start programm CODUS: 29.12.2022  00:15:24 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.29 00:15:25 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+D: Close database archive & report.
+D: Stop network interfaces.
+D: Time exit from programm CODUS: 29.12.2022  00:17:37 
+
+
+D: Time start programm CODUS: 29.12.2022  00:22:04 
+D: Version 14.0910 GW
+Create flag file.
+D: System initialization...
+D: Ok!
+Clear database array.
+D: Reading configure & system files...
+2022.12.29 00:22:04 D: Defined user command file name: [kamst/codus.cmd].
+Read config file.
+COMStat: Disable.
+NBWStat: Enable. 
+TCPStat: Disable.
+Check system files.
+Read database channel file.
+Read database alarm file.
+Read save data file.
+Read command file.
+D: Ok!
+D: For load variables need 11911187 byte in memory.
+D: For load graphics need 81113376 byte in memory (not video).
+Current desktop resolution: 1368x768
+D: Set graphics mode: A:1024x768.
+Load font data file.
+Load cursors data file.
+Rect fill screen.
+Init and start timers.
+Create thread COM port exchange.
+Create thread NetBIOS exchange.
+Start: Public cycle...
+D: Begin function Mexit. Release memory graphics occupied.
+D: Write flag end programm.
+D: Close current database files.
+D: Write archive buffers.
+D: Close database archive & report.
+D: Stop network interfaces.
+D: Time exit from programm CODUS: 29.12.2022  00:24:38 
+

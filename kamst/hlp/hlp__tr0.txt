@@ -1,6 +1,7 @@
-~001^015 ЭКРАН: ~004ГРАФИКИ~000
+~001^015 SCREEN: ~004GRAPHS~000
 ~000
-~000 На данном экране отображается меню (полоски) выбора графиков.
-~000 Переход по пунктам меню осуществляется нажатием клавиш стрелочек на клавиатуре.
-~000 Остановившись на нужном графике, надо  нажать клавишу  ENTER  для перехода  на
-~000 выбранный график.
+~000 This screen displays the chart selection menu (bars).
+~000 Navigate through the menu items by pressing the arrow keys on the keyboard.
+~000 Having stopped at the desired chart, you must press the ENTER key to go to
+~000 selected chart.
+~000

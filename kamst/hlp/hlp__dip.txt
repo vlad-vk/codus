@@ -1,17 +1,18 @@
-~001^015 ЭКРАН: ~004ДИАПАЗОНЫ
+~001^015 SCREEN: ~004RANGES
 ~000
-~000 На экране определяются значения диапазонов каналов АСУТП.
-~000 Модули УСО (Устройства Сопряжения с Объектом) имеют входной диапазон от 0 до 20 мА.
-~000 Используемые приборы преобразования могут иметь выходной диапазон 0..5,0..20,4..20 мА.
-~000 Для каждого канала нужно пересчитать диапазон шкалы отображения и сдвиг нуля.
-~000 Для приборов с выходным диапазоном 4..20 мА пересчет будет следующим:
-~000 Диапазон шкалы отображения= (шкала прибора) + (шкала прибора/4)
-~000 Ноль шкалы отображения=   - (шкала прибора/4)
-~000 Для приборов с выходным диапазоном 0..5 мА пересчет будет следующим:
-~000 Диапазон шкалы отображения= (шкала прибора) * 4
-~000 Ноль шкалы отображения= 0.
-~000 В поле "Фильтр"  определяется максимальное значение на которое может изменяться
-~000 текущее значение канала за один цикл программы контроллера.
-~000 В поле "Среднее" определяют количество циклов за которые происходит  усреднение
-~000 текущего значения измеряемого параметра.
-~000 
+~000 On the screen, the values the ranges of the APCS channels are determined.
+~000 Object Interface Devices have an input range from 0 to 20 mA.
+~000 Used conversion devices can have an output range of 0..5.0..20.4..20 mA.
+~000 For each channel, you need to recalculate the range of the display scale and
+~000 the zero offset.
+~000 For devices with an output range of 4..20 mA, the conversion will be as follows:
+~000 Display Scale Range = (Instrument Scale) + (Instrument Scale/4)
+~000 Display scale zero = - (device scale/4)
+~000 For devices with an output range of 0..5 mA, the conversion will be as follows:
+~000 Display Scale Range = (Instrument Scale) * 4
+~000 Display scale zero = 0.
+~000 The "Filter" field defines the maximum value by which the
+~000 current value of the channel for one cycle of the controller program.
+~000 In the "Average" field, determine the number of cycles for which averaging occurs
+~000 current value of the measured parameter.
+~000

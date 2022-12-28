@@ -1,3 +1,4 @@
-~000^015 ЭКРАН: ~004ТАБЛИЦА~000
+~000^015 SCREEN: ~004TABLE~000
 ~000
-~000 На данном экране ввиде таблицы выводятся значения технологических парамметров.
+~000 This screen displays the values process parameters in the form of a table.
+~000

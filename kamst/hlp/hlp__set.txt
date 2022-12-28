@@ -1,3 +1,3 @@
-~001^015 ЭКРАН: ~004УСТАНОВКИ
+~001^015 SCREEN: ~004SETTINGS
 ~000
-~000 На экране определяются значения временных интервалов и дополнительных установок.
+~000 The screen defines the values the time intervals and additional settings.

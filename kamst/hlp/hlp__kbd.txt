@@ -1,60 +1,61 @@
-~004^015 ОБШИЕ КЛАВИШИ:                                                                                            | 
-~005 F1~001         - вызов экрана помощи по программе и клавишам                                                  | 
-~005 F2~003         - переход на экран СХЕМА АСУТП                                                                 | 
-~005 F3~001         - переход на экран РЕГУЛЯТОРЫ                                                                  | 
-~005 F4~003         - переход на экран ГРАФИКИ                                                                     | 
-~005 F5~001         - переход на экран ТАБЛИЦА                                                                     | 
-~005 F6~003         - переход на экран СООБЩЕНИЯ                                                                   | 
-~005 F7~001         - переход на экран СИСТЕМА                                                                     | 
-~005 F8~003         - переход на экран МОДУЛИ                                                                      | 
-~005 Shift B~001    - загрузка начального экрана программы                                                         | 
-~005 Shift X~001    - выход из программы                                                                           | 
-~005 P~003          - возврат на предыдущий экран (без фиксации позиции)                                           | 
-~005 стрелка_вверх~001 - переход по имеющимся на данном экране пунктам меню или кнопкам                            | 
-~005 стрелка_вниз~001                                                                                              | 
-~005 Ctrl пробел~003   - переключение клавиатуры ввода строк (РУС/АНГ)                                             | 
+~004^015 GENERAL KEYS:                                                          
+~005 F1~001         - calling the help screen for the program and keys
+~005 F2~003         - transition to the SCADA DIAGRAM screen
+~005 F3~001         - go to the CONTROLS screen
+~005 F4~003         - switch to the GRAPHICS screen
+~005 F5~001         - switch to the TABLE screen
+~005 F6~003         - go to the MESSAGES screen
+~005 F7~001         - go to the SYSTEM screen
+~005 F8~003         - go to the MODULES screen
+~005 Shift B~001    - loading the initial screen of the program
+~005 Shift Q~001    - exit from the program
+~005 P~003          - return to the previous screen (without fixing the position)
+~005 стрелка_вверх~001 - navigate through the menu items or buttons available on this screen
+~005 стрелка_вниз~001                                                            
+~005 Ctrl пробел~003   - switching the keyboard for entering strings (RUS / ENG)
 
-~004 УПРАВЛЕНИЕ С ПОМОЩЬЮ МЫШИ:                                                                                    |
-~005 Двойное нажатие правой кнопки~001 - возврат на предыдущий экран                                               | 
-~005 Нажатие левой кнопки~003, если курсор ввиде указательного пальца или                                          | 
-~003 креста, приведет к выполнению действия, указанного в строке статуса.                                          | 
-                                                                                                                   |
-~004 КЛАВИШИ ПРОСМОТРА ФАЙЛОВ:                                                                                     | 
-~005 PgUp~001       - страница вверх (к началу файла)                                                              | 
-~005 PgDn~001       - страница вниз  (к концу  файла)                                                              | 
-~005 Home~001       - на начало файла                                                                              | 
-~005 End~001        - в конец файла                                                                                | 
-~005 Alt_N~003      - переключение между файлами просмотра                                                         | 
-~005 Alt_F~001      - ввод строки для поиска                                                                       | 
-~005 Alt_G~003      - поиск введенной строки вперед                                                                | 
-~005 Alt_T~003      - поиск введенной строки назад                                                                 | 
-~005 Alt_D~001      - ввод даты для просмотра файлов отчетов                                                       | 
-~004 ПРИ ПРОСМОТРЕ СООБЩЕНИЙ:                                                                                      |
-~005 M~001          - ввод сообщения оператора                                                                     |
-~005 Alt_M~001      - запись сообщения оператора в файл сообщений                                                  | 
-                                                                                                                   |
-                                                                                                                   |
-~004 КЛАВИШИ ТРЕНДОВ:                                                                                              |
-~005 Ctrl_N~001     - переключение между трендами                                                                  |
-~005 Ctrl_TAB~001   - переключение между трендами                                                                  |
-~005 Ctrl +~003     - изменение количества секунд в тренде                                                         |
-~005 Ctrl -~003     - изменение количества секунд в тренде                                                         |
-~005 Ctrl_A~001     - изменение режима активного тренда                                                            |
-~005 Ctrl <-~003    - передвижение временного среза                                                                |
-~005 Ctrl ->~003    - передвижение временного среза                                                                |
-~005 Ctrl_HOME~003  - передвижение временного среза                                                                |
-~005 Ctrl_END~003   - передвижение временного среза                                                                |
-~005 Ctrl_0...~001  - включение-выключение выбранного графика и временного среза                                   |
-~005 Ctrl_9~001                                                                                                    |
-~005 Ctrl_INS~003   - изменение шага временного среза                                                              |
-~005 Ctrl_DEL~003   - изменение шага временного среза                                                              |
-~005 Ctrl_PGDN~001  - листание тренда в режиме архива на количество секунд в тренде                                |
-~005 Ctrl_PGUP~001                                                                                                 |
-~005 Ctrl <~003     - изменение массштаба шкалы тренда                                                             |
-~005 Ctrl >~003                                                                                                    |
-~005 Ctrl /~001     - переключение между массштабами тренда                                                        |
-~005 Ctrl M~003     - переключение между режимами движения по шкале тренда                                         |
-~005 Ctrl вверх~001 - передвижение по шкале тренда вверх-вниз                                                      |
-~005 Ctrl вниз~001                                                                                                 |
-~005 Ctrl_D~003     - ввод даты файла архива для просмотра тренда                                                  |
-~005 Ctrl_T~001     - ввод времени для просмотра архива                                                            |
+~004 MOUSE CONTROL:
+~005 Double right click ~001 - return to the previous screen
+~005 Pressing the left button ~003 if the cursor is in the form of an index finger or
+~003 cross, will cause the action specified in the status line to be performed.
+                                                                                
+~004 KEYS FOR VIEWING FILE:
+~005 PgUp~001       - page up (to the beginning of the file)
+~005 PgDn~001       - page down (end of file)
+~005 Home~001       - to the beginning of the file
+~005 End~001        - to the end of the file
+~005 Alt_N~003      - switching between view files
+~005 Alt_F~001      - search string input
+~005 Alt_G~003      - search the entered string forward
+~005 Alt_T~003      - search entered string backwards
+~005 Alt_D~001      - enter date to view report files
+
+~004 WHEN VIEWING MESSAGES:
+~005 M~001          - operator message entry
+~005 Alt_M~001      - writing an operator message to a message file
+                                                                                
+                                                                                
+~004 TREND KEYS:
+~005 Ctrl_N~001     - switching between trends
+~005 Ctrl_TAB~001   - switching between trends
+~005 Ctrl +~003     - changing the number of seconds in a trend
+~005 Ctrl -~003     - changing the number of seconds in a trend
+~005 Ctrl_A~001     - changing the active trend mode
+~005 Ctrl <-~003    - time slice movement
+~005 Ctrl ->~003    - time slice movement
+~005 Ctrl_HOME~003  - time slice movement
+~005 Ctrl_END~003   - time slice movement
+~005 Ctrl_0...~001  - switching on/off the selected chart and time slice
+~005 Ctrl_9~001                                                                 
+~005 Ctrl_INS~003   - time slice step change
+~005 Ctrl_DEL~003   - time slice step change
+~005 Ctrl_PGDN~001  - paging through the trend in archive mode by the number of seconds in the trend
+~005 Ctrl_PGUP~001                                                              
+~005 Ctrl <~003     - changing the scale of the trend scale
+~005 Ctrl >~003                                                                 
+~005 Ctrl /~001     - switching between trend scales
+~005 Ctrl M~003     - switching between driving modes on a trend scale
+~005 Ctrl вверх~001 - moving up and down the trend scale
+~005 Ctrl вниз~001                                                              
+~005 Ctrl_D~003     - enter the date of the archive file to view the trend
+~005 Ctrl_T~001     - enter the time to view the archive

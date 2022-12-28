@@ -1,27 +1,27 @@
-~001^015 ЭКРАН: ~004СХЕМА
+~001^015 SCREEN: ~004SCHEME
 
-~000 На экране отображается схема Автоматической Системы Управления Технологическим Процессом.
+~000 The screen displays a diagram of the Automatic Process Control System.
 ~000 
-~000 В правом верхнем углу экрана под выводом времени - отображаются два прямоугольника,
-~000 сигнализирующие о том, какая сеть включена для работы:
-~000 Первый прямоугольник - сеть по COM порту.
-~000 Второй прямоугольник - сеть EtherNet по протоколу Novell NetBIOS.
-~000 Если сеть включена прямоугольник должен выводится голубым цветом, иначе - красным.
-~000 Состояние сети можно так же посмотреть на тренде на экране "СИСТЕМА".
+~000 In the upper right corner of the screen under the time display - two rectangles
+~000 are displayed, signaling which network is enabled for operation:
+~000 The first rectangle is the network by COM port.
+~000 The second rectangle is an EtherNet network using the Novell NetBIOS protocol.
+~000 If the network is enabled, the rectangle should be displayed in blue,
+~000 otherwise - in red. 
+~000 Network status can also be viewed on the trend on the "SYSTEM" screen.
 ~000 
-~000 Нижняя строка с зеленым треугольником - называется строкой статуса.
-~000 В этой строке выводятся краткие подсказки по программе, названиям пунктов меню и 
-~000 измеряемым параметрам. 
-~000 Строка с розовым треугольником называется строкой сообщений.
-~000 В этой строке выводятся сообщения передаваемые с контроллера о ходе технологического
-~000 процесса и всякого рода переключениях и включениях. 
-~000 Выводимые сообщения записываются в файл, который можно просмотреть, нажав клавишу "F6".
+~000 The bottom line with a green triangle is called the status line.
+~000 This line displays brief tips on the program, the names of menu items and
+~000 measured parameters.
+~000 The line with the pink triangle is called the message line.
+~000 This line displays messages transmitted from the controller about the progress 
+~000 of the technological process and all sorts of switching and switching on.
+~000 Output messages are written to a file that can be viewed by pressing the "F6" key.
 ~000
-~000 Для того, чтобы вернуться  на  предыдущий экран- надо нажать клавишу "P"(английское).
-~000 Английские буквы на клавиатуре нарисованы черным цветом.
+~000 In order to return to the previous screen, you must press the "P" (English) key.
 ~000 
-~000 Измеряемые значения текущих параметров на схеме выводятся в желтых рамках.
-~000 Нажимая клавиши стрелочек на  клавиатуре, можно  переходить по схеме от одного 
-~000 исполнителя к другому. Остановившись на нужном исполнителе, можно нажать 
-~000 клавишу ENTER и перейти на экран регулятора данного исполнителя.
+~000 The measured values the current parameters on the diagram are displayed in 
+~000 yellow frames. By pressing the arrow keys on the keyboard, you can move through 
+~000 the scheme from one object to another. Having stopped at the desired object, 
+~000 you can click ENTER key and go to that object's screen.
 ~000 

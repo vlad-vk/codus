@@ -1,19 +1,19 @@
-~001^015 ЭКРАН: ~004СИГНАЛИЗАЦИЯ
+~001^015 SCREEN: ~004SIGNALING
 ~000
-~000 На этом экране технолог должен установить минимально и максимально допустимые значения
-~000 технологических параметров, которые измеряются АСУТП.
+~000 On this screen, the technologist must set the minimum and maximum allowable values
+~000 technological parameters that are measured by the process control system.
 ~000 
-~000 В крайней левой колонке выведено название технологического параметра.
-~000 Во второй колонке выведено минимальное и  в следующей максимальное допустимое значение
-~000 технологического пармметра.
-~000 Если текущее значение какого-либо парамметра будет ниже, чем указано в колонке MIN или 
-~000 выше, чем указано в колонке MAX - включается звуковой сигнал, а сообщение записывается 
-~000 в файл сообщений.
-~000 Для установки параметров MIN/MAX нужно вывести рамку с помощью кнопок стрелочек клавиатуры
-~000 на нужное окошко(параметр) и нажать клавишу ENTER.
-~000 После этого в окошке выбранного параметра должен замигать курсор, что сигнализирует о 
-~000 разрешении ввода цифровых значений  с клавиатуры.
-~000 Теперь можно с помощью цифровых клавиш набрать нужное значение и для подтверждения ввода
-~000 нажать клавишу ENTER. Если было введено неправильное значение, то вместо ENTER надо нажать
-~000 клавишу ESC и повторить ввод.
+~000 The leftmost column displays the name of the technological parameter.
+~000 The second column shows the minimum and the next column the maximum allowable value
+~000 process parameter.
+~000 If the current value of any parameter is lower than indicated in the MIN column or
+~000 higher than indicated in the MAX column - the sound signal is turned on and 
+~000 the message is recorded to the message file.
+~000 To set the MIN / MAX parameters, you need to display the frame using the arrow
+~000 keys on the keyboard to the desired box (parameter) and press the ENTER key.
+~000 After that, the cursor in the selected parameter window should blink, which 
+~000 indicates that to enable numeric input from the keyboard.
+~000 Now you can use the numeric keys to enter the desired value and to confirm the input
+~000 press the ENTER key. If an incorrect value was entered, then instead of ENTER, press
+~000 ESC key and repeat input.
 ~000 

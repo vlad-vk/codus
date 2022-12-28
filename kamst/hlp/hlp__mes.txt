@@ -1,20 +1,21 @@
-~001^015 ЭКРАН: ~004СООБЩЕНИЯ~000
+~001^015 SCREEN: ~004MESSAGES~000
 ~000
-~000 На экране СООБЩЕНИЯ выводятся все сообщения, которые поступают от контроллера.
-~000 Сообщения делятся на следующие группы и выделяются разными цветами:
+~000 The MESSAGES screen displays all messages that come from the controller.
+~000 Messages are divided into the following groups and highlighted in different colors:
 ~000
-~000 СИСТЕМНЫЕ СООБЩЕНИЯ - системная информация или подсказки.
+~000 SYSTEM MESSAGES - system information or tips.
 ~000
-~000 СООБЩЕНИЯ НАРУШЕНИЙ - информирует о выходе  контролируемых
-~000 параметров за определенные на экране СИГНАЛИЗАЦИЯ пределы, о нарушениях работы
-~000 системы и о любых других нарушениях.
+~000 VIOLATION MESSAGES - informs about the output of controlled
+~000 parameters beyond the limits defined on the ALARM screen, about malfunctions
+~000 system and any other violations.
 ~000
-~000 СООБЩЕНИЯ ВОССТАНОВЛЕНИЙ - при восстановлении значений
-~000 контролируемых парамметров после нарушений.
+~000 RESET MESSAGES - when restoring values
+~000 monitored parameters after violations.
 ~000
-~000 Для просмотра сообщений, которые были вначале суток можно нажать клавишу Home.
-~000 Для просмотра сообщений, которые записывались самыми последними- клавишу End.
-~000 Для просмотра сообщений постранично можно нажимать клавиши PgUp или PgDn.
-~000 Для просмотра сообщений за другой день нужно, удерживая клавишу Alt, нажать
-~000 клавишу D и, при появлении курсора в строке даты, ввести нужную дату и нажать
-~000 клавишу Enter.
+~000 To view messages that were at the beginning of the day, you can press the Home key.
+~000 To view the most recent messages, press the End key.
+~000 You can press the PgUp or PgDn keys to view messages page by page.
+~000 To view messages from another day, hold down the Alt key and press
+~000 key D and, when the cursor appears in the date line, enter the desired date and press
+~000 Enter key.
+~000 
