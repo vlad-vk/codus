@@ -9,10 +9,10 @@
 
 l0020 = 0 ;                  # no change flag
 l0021 = 0 ;                  # menu disable flag
-l0046 = 787878 ;             # master password
-l0048 = 454545 ;             # technologist password
-l0012 = 255 ;
-l0013 = 12  ;
+l0046 = l0045 ;              # master password
+l0048 = l0047 ;              # technologist password
+l0012 = 255  ;
+l0013 = 12   ;
 
 x0021 = 0 ;                  # inscription color when the MASTER password is entered
 x0022 = 0 ;                  # the color of the inscription when the TECHNOLOGY password is entered
@@ -25,19 +25,19 @@ if l0047 ! l0048 ;
 fi ;
 
 x0025 = 0 ;                  # screen is password controlled
-if l0031 = 6 ;               # SETTINGS screen
+if l0031 = 6 ;               # SETTINGS screen [6]
    x0025 = 1 ;
 fi ;
-if l0031 = 4 ;               # RANGE screen
+if l0031 = 4 ;               # RANGE screen [4]
+   x0025 = 1 ;               
+fi ;
+if l0031 = 8 ;               # "I7042 MODULES" screen [8]
    x0025 = 1 ;
 fi ;
-if l0031 = 8 ;               # "I7042 MODULES" screen
+if l0031 = 7 ;               # CONTROL SETTINGS screen [7]
    x0025 = 1 ;
 fi ;
-if l0031 = 7 ;               # CONTROL SETTINGS screen
-   x0025 = 1 ;
-fi ;
-if l0031 = 5 ;               # ALARM screen
+if l0031 = 5 ;               # ALARM screen [5]
    x0025 = 2 ;
 fi ;
 
@@ -101,13 +101,13 @@ if l0031 = 2 ;               # set the click handling flag in CODUS
 fi ;
 
 #-----------------------------------------------------------------------------
-if l0007 = 57 ;                        # if transition to the "TEST1" screen is selected
+if l0007 = 57 ;              # if transition to the "TEST1" screen is selected
    if l0045 ! l0046 ;
       l0007 = 0 ;
       l0032 = 1 ;
    fi ;
 fi ;
-if l0007 = 58 ;                        # if transition to the "TEST2" screen is selected
+if l0007 = 58 ;              # if transition to the "TEST2" screen is selected
    if l0045 ! l0046 ;
       l0007 = 0 ;
       l0032 = 1 ;
