@@ -3,9 +3,9 @@ Examples of my projects for the automation of industrial sections of factories.
 </p><br>
 
 <table>
-<tr><td> kamst               </td><td> - Project KAMST: Saturation site of a sugar factory.             </td></tr>
+<tr><td> kamst               </td><td> - Project KAMST: Saturation site of a sugar factory. [EN]        </td></tr>
 <tr><td> kamst_screenshots   </td><td> - Project KAMST: Screenshots.                                    </td></tr>
-<tr><td> obaedz2             </td><td> - Project OBAEDZ2: Dosage of foam-concrete mixture.              </td></tr>
+<tr><td> obaedz2             </td><td> - Project OBAEDZ2: Dosage of foam-concrete mixture. [RU]         </td></tr>
 <tr><td> obaedz2_screenshots </td><td> - Project OBAEDZ2: Screenshots.                                  </td></tr>
 <tr><td> ozpmak              </td><td> - Project OZPMAK: Control of the firing of foam concrete blocks. </td></tr>
 <tr><td> ozpmak_pccs21       </td><td> - Project OZPMAK: Disk image for PC PLC.                         </td></tr>
